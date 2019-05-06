@@ -11,4 +11,9 @@ public class Country
         continent = continent;
         troops = troops;
     }
+    
+    public String getName()
+    {
+        return name;
+    }
 }

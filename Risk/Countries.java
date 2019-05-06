@@ -1,0 +1,54 @@
+import java.util.*;
+
+public class Countries
+{
+    ArrayList<Country> Countries = new ArrayList<country>();
+    Country Alaska = new Country("Alaska", "North America", 1);
+    Country Alaska = new Country("Alberta", "North America", 1);
+    Country Alaska = new Country("Central America", "North America", 1);
+    Country Alaska = new Country("Eastern United States", "North America", 1);
+    Country Alaska = new Country("Greenland", "North America", 1);
+    Country Alaska = new Country("Northwest Territory", "North America", 1);
+    Country Alaska = new Country("Ontario", "North America", 1);
+    Country Alaska = new Country("Quebec", "North America", 1);
+    Country Alaska = new Country("Western United States", "North America", 1);
+    Country Alaska = new Country("Argentina", "South America", 1);
+    Country Alaska = new Country("Brazil", "South America", 1);
+    Country Alaska = new Country("Peru", "South America", 1);
+    Country Alaska = new Country("Venezuela", "South America", 1);
+    Country Alaska = new Country("Great Britain", "Europe", 1);
+    Country Alaska = new Country("Iceland", "Europe", 1);
+    Country Alaska = new Country("Northern Europe", "Europe", 1);
+    Country Alaska = new Country("Scandinavia", "Europe", 1);
+    Country Alaska = new Country("Southern Europe", "Europe", 1);
+    Country Alaska = new Country("Ukraine", "Europe", 1);
+    Country Alaska = new Country("Western Europe", "Europe", 1);
+    Country Alaska = new Country("Congo", "Africa", 1);
+    Country Alaska = new Country("Alaska", "North America", 1);
+    Country Alaska = new Country("Alaska", "North America", 1);
+    Country Alaska = new Country("Alaska", "North America", 1);
+    Country Alaska = new Country("Alaska", "North America", 1);
+    Country Alaska = new Country("Alaska", "North America", 1);
+    Country Alaska = new Country("Alaska", "North America", 1);
+    Country Alaska = new Country("Alaska", "North America", 1);
+    Country Alaska = new Country("Alaska", "North America", 1);
+    Country Alaska = new Country("Alaska", "North America", 1);
+    Country Alaska = new Country("Alaska", "North America", 1);
+    Country Alaska = new Country("Alaska", "North America", 1);
+    Country Alaska = new Country("Alaska", "North America", 1);
+    Country Alaska = new Country("Alaska", "North America", 1);
+    Country Alaska = new Country("Alaska", "North America", 1);
+    Country Alaska = new Country("Alaska", "North America", 1);
+    Country Alaska = new Country("Alaska", "North America", 1);
+    Country Alaska = new Country("Alaska", "North America", 1);
+    Country Alaska = new Country("Alaska", "North America", 1);
+    Country Alaska = new Country("Alaska", "North America", 1);
+    Country Alaska = new Country("Alaska", "North America", 1);
+    Country Alaska = new Country("Alaska", "North America", 1);
+    Country Alaska = new Country("Alaska", "North America", 1);
+    Country Alaska = new Country("Alaska", "North America", 1);
+    Country Alaska = new Country("Alaska", "North America", 1);
+    Country Alaska = new Country("Alaska", "North America", 1);
+    Country Alaska = new Country("Alaska", "North America", 1);
+    Country Alaska = new Country("Alaska", "North America", 1);
+}
