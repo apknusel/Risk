@@ -15,7 +15,7 @@ public class Deck
 
 	/**
 	* Creates all 42 cards, one for each territory. Each card has either 
-	* a type of Infantry, Cavalry, or Artillery. Ensure that the number of
+	* a type of Infantry, Cavalry, or Artillery. The number of
 	* Infantry, Cavalry, and Artillery are the same
 	**/
 	public Deck (ArrayList<Country> countries)
