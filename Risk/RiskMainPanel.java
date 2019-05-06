@@ -1,6 +1,8 @@
 import java.awt.*;  
-import javax.swing.*;  
-public class RiskMainPanel {
+import javax.swing.*;
+
+public class RiskMainPanel
+{
      RiskMainPanel()  
      {
         JFrame f= new JFrame("Risk");    
@@ -23,10 +25,9 @@ public class RiskMainPanel {
         f.setSize(400,400);    
         f.setLayout(null);    
         f.setVisible(true);    
-        
      }  
      public static void main(String args[])  
      {  
         new RiskMainPanel();  
-     }  
-    }  
+     }
+}  
