@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Hand()
+comment1.params=card
+comment1.target=void\ add(Card)
+comment2.params=in1\ in2\ in3
+comment2.target=void\ removeCardsFromHand(int,\ int,\ int)
+comment3.params=in1\ in2\ in3
+comment3.target=boolean\ canTurnInCards(int,\ int,\ int)
+comment4.params=
+comment4.target=boolean\ mustTurnInCards()
+comment5.params=
+comment5.target=java.util.ArrayList\ getCards()
+numComments=6
