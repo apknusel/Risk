@@ -1,4 +1,4 @@
-Alaska,Alberta,Northwest Territory,Kamchatka
+        Alaska,Alberta,Northwest Territory,Kamchatka
 	Alberta,Alaska,Northwest Territory,Ontario,Western United States
 	Central America,Western United States,Venezuela
 	Eastern United States,Western United States,Ontario,Quebec
