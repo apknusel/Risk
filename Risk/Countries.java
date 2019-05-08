@@ -18,7 +18,7 @@ public class Countries
     Country GreatBritain = new Country("Great Britain", "Europe", 2);
     Country Iceland = new Country("Iceland", "Europe", 1);
     Country NorthernEurope = new Country("Northern Europe", "Europe", 3);
-    Country Scandanavia = new Country("Scandinavia", "Europe", 2);
+    Country Scandinavia = new Country("Scandinavia", "Europe", 2);
     Country SouthernEurope = new Country("Southern Europe", "Europe", 3);
     Country Ukraine = new Country("Ukraine", "Europe", 1);
     Country WesternEurope = new Country("Western Europe", "Europe", 3);
@@ -46,6 +46,47 @@ public class Countries
     Country WesternAustralia = new Country("Western Australia", "Australia", 2);
     
     Country[] AlaskaNeighbours = {Alberta, NorthwestTerritory, Kamchatka};
+    Country[] AlbertaNeighbours = {Alaska, NorthwestTerritory, Ontario, WesternUnitedStates};
+    Country[] CentralAmericaNeighbours = {WesternUnitedStates, Venezuela};
+    Country[] EasternUnitedStatesNeighbours = {WesternUnitedStates, Ontario, Quebec};
+    Country[] GreenlandNeighbours = {NorthwestTerritory, Ontario, Quebec, Iceland};
+    Country[] NorthwestTerritoryNeighbours = {Alaska, Greenland, Ontario, Alberta};
+    Country[] OntarioNeighbours = {NorthwestTerritory, Greenland, Quebec, EasternUnitedStates, WesternUnitedStates, Alberta};
+    Country[] QuebecNeighbours = {Ontario, Greenland, EasternUnitedStates};
+    Country[] WesternUnitedStatesNeighbours = {Alberta, Ontario, EasternUnitedStates ,CentralAmerica};
+    Country[] ArgentinaNeighbours = {Peru, Brazil};
+    Country[] BrazilNeighbours = {Venezuela, NorthAfrica, Argentina, Peru};
+    Country[] PeruNeighbours = {Argentina, Brazil, Venezuela};
+    Country[] VenezuelaNeighbours = {CentralAmerica, Brazil, Argentina};
+    Country[] GreatBritainNeighbours = {Iceland, Scandinavia, NorthernEurope, WesternEurope};
+    Country[] IcelandNeighbours = {Greenland, GreatBritain};
+    Country[] NorthernEuropeNeighbours = {GreatBritain, Ukraine, SouthernEurope, WesternEurope};
+    Country[] ScandinaviaNeighbours = {GreatBritain, Ukraine};
+    Country[] SouthernEuropeNeighbours = {WesternEurope, NorthernEurope, Ukraine, Egypt, NorthAfrica};
+    Country[] UkraineNeighbours = {Scandinavia, Ural, Afghanistan, MiddleEast, SouthernEurope, NorthernEurope};
+    Country[] WesternEuropeNeighbours = {GreatBritain, NorthernEurope, SouthernEurope, NorthAfrica};
+    Country[] CongoNeighbours = {NorthAfrica, Egypt, EastAfrica, SouthAfrica};
+    Country[] EastAfricaNeighbours = {Egypt, Madagascar, SouthAfrica, Congo};
+    Country[] EgyptNeighbours = {SouthernEurope, MiddleEast, EastAfrica, Congo, NorthAfrica};
+    Country[] MadagascarNeighbours = {EastAfrica, SouthAfrica};
+    Country[] NorthAfricaNeighbours = {WesternEurope, SouthernEurope, Egypt, Congo, Brazil};
+    Country[] SouthAfricaNeighbours = {Congo, EastAfrica, Madagascar};
+    Country[] AfghanistanNeighbours = {Ukraine, Ural, Siberia, China, India, MiddleEast};
+    Country[] ChinaNeighbours = {Afghanistan, Siberia, Mongolia, Siam, India};
+    Country[] IndiaNeighbours = {MiddleEast, Afghanistan, China, Siam};
+    Country[] IrkutskNeighbours = {Siberia, Yakutsk, Kamchatka, Mongolia};
+    Country[] JapanNeighbours = {Kamchatka, Mongolia};
+    Country[] KamchatkaNeighbours = {Yakutsk, Alaska, Japan, Mongolia, Irkutsk};
+    Country[] MiddleEastNeighbours = {Ukraine, Afghanistan, India, Egypt};
+    Country[] MongoliaNeighbours = {Siberia, Irkutsk, Kamchatka, Japan, China};
+    Country[] SiamNeighbours = {India, China, Indonesia};
+    Country[] SiberiaNeighbours = {Ural, Yakutsk, Irkutsk, Mongolia, China, Afghanistan};
+    Country[] UralNeighbours = {Ukraine, Siberia, Afghanistan};
+    Country[] YakutskNeighbours = {Siberia, Kamchatka, Irkutsk};
+    Country[] EasternAustraliaNeighbours = {NewGuinea, WesternAustralia};
+    Country[] IndonesiaNeighbours = {EasternAustralia, NewGuinea};
+    Country[] NewGuineaNeighbours = {EasternAustralia, Indonesia, WesternAustralia};
+    Country[] WesternAustraliaNeighbours = {EasternAustralia, Indonesia, NewGuinea};
 
     public void setAdjacentCountries()
     {
@@ -58,14 +99,14 @@ public class Countries
         Ontario.setAdjacentCountries(OntarioNeighbours);
         Quebec.setAdjacentCountries(QuebecNeighbours);
         WesternUnitedStates.setAdjacentCountries(WesternUnitedStatesNeighbours);
-        Argentina.setAdjacentCountries(AregentinaNeighbours);
+        Argentina.setAdjacentCountries(ArgentinaNeighbours);
         Brazil.setAdjacentCountries(BrazilNeighbours);
         Peru.setAdjacentCountries(PeruNeighbours);
         Venezuela.setAdjacentCountries(VenezuelaNeighbours);
         GreatBritain.setAdjacentCountries(GreatBritainNeighbours);
         Iceland.setAdjacentCountries(IcelandNeighbours);
         NorthernEurope.setAdjacentCountries(NorthernEuropeNeighbours);
-        Scandanavia.setAdjacentCountries(ScandanaviaNeighbours);
+        Scandinavia.setAdjacentCountries(ScandinaviaNeighbours);
         SouthernEurope.setAdjacentCountries(SouthernEuropeNeighbours);
         Ukraine.setAdjacentCountries(UkraineNeighbours);
         WesternEurope.setAdjacentCountries(WesternEuropeNeighbours);
@@ -90,7 +131,7 @@ public class Countries
         EasternAustralia.setAdjacentCountries(EasternAustraliaNeighbours);
         Indonesia.setAdjacentCountries(IndonesiaNeighbours);
         NewGuinea.setAdjacentCountries(NewGuineaNeighbours);
-        WesternAustralia.setAdjacentCountries(WestAustraliaNeighbours);
+        WesternAustralia.setAdjacentCountries(WesternAustraliaNeighbours);
     }
     
     
