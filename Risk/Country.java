@@ -2,7 +2,7 @@
 public class Country
 {
     String name;
-    String occupant;
+    Player occupant;
     String continent;
     int troops;
     Country[] adjacentCountries;
@@ -12,7 +12,6 @@ public class Country
         name = name;
         troops = troops;
         continent = continent;
-        occupant = "None";
     }
     
     public void setAdjacentCountries(Country[] adjacentCountries)
@@ -20,12 +19,12 @@ public class Country
         adjacentCountries = adjacentCountries;
     }
     
-    public void setOccupant(String player)
+    public void setOccupant(Player player)
     {
         occupant = player;
     }
     
-    public String getOccupant()
+    public Player getOccupant()
     {
         return occupant;
     }
