@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Countries
+public class CountriesContinents
 {
     Country Alaska = new Country("Alaska", "North America", 1);
     Country Alberta = new Country("Alberta", "North America", 1);
@@ -134,135 +134,17 @@ public class Countries
         WesternAustralia.setAdjacentCountries(WesternAustraliaNeighbours);
     }
     
+    Country[] NorthAmericaCountries = {Alaska, Alberta, CentralAmerica, EasternUnitedStates, Greenland, NorthwestTerritory, Ontario, Quebec, WesternUnitedStates};
+    Country[] SouthAmericaCountries = {Argentina, Brazil, Peru, Venezuela};
+    Country[] EuropeCountries = {GreatBritain, Iceland, NorthernEurope, Scandinavia, SouthernEurope, Ukraine, WesternEurope};
+    Country[] AfricaCountries = {Congo, EastAfrica, Egypt, Madagascar, NorthAfrica, SouthAfrica};
+    Country[] AsiaCountries = {Afghanistan, China, India, Irkutsk, Japan, Kamchatka, MiddleEast, Mongolia, Siam, Siberia, Ural, Yakutsk};
+    Country[] AustraliaCountries = {EasternAustralia, Indonesia, NewGuinea, WesternAustralia};
     
-    
-    
-//     public void CountryAdd()
-//     {
-//         Countries.add(Alaska);
-//         Countries.add(Alberta);
-//         Countries.add(CentralAmerica);
-//         Countries.add(EasternUnitedStates);
-//         Countries.add(Greenland);
-//         Countries.add(NorthwestTerritory);
-//         Countries.add(Ontario);
-//         Countries.add(Quebec);
-//         Countries.add(WesternUnitedStates);
-//         Countries.add(Argentina);
-//         Countries.add(Brazil);
-//         Countries.add(Peru);
-//         Countries.add(Venezuela);
-//         Countries.add(GreatBritain);
-//         Countries.add(Iceland);
-//         Countries.add(NorthernEurope);
-//         Countries.add(Scandanavia);
-//         Countries.add(SouthernEurope);
-//         Countries.add(Ukraine);
-//         Countries.add(WesternEurope);
-//         Countries.add(Congo);
-//         Countries.add(EastAfrica);
-//         Countries.add(Egypt);
-//         Countries.add(Madagascar);
-//         Countries.add(NorthAfrica);
-//         Countries.add(SouthAfrica);
-//         Countries.add(Afghanistan);
-//         Countries.add(China);
-//         Countries.add(India);
-//         Countries.add(Irkutsk);
-//         Countries.add(Japan);
-//         Countries.add(Kamchatka);
-//         Countries.add(MiddleEast);
-//         Countries.add(Mongolia);
-//         Countries.add(Siam);
-//         Countries.add(Siberia);
-//         Countries.add(Ural);
-//         Countries.add(Yakutsk);
-//         Countries.add(EasternAustralia);
-//         Countries.add(Indonesia);
-//         Countries.add(NewGuinea);
-//         Countries.add(WesternAustralia);
-//         Countries.add(Alaska);
-//         Countries.add(Alberta);
-//         Countries.add(CentralAmerica);
-//         Countries.add(EasternUnitedStates);
-//         Countries.add(Greenland);
-//         Countries.add(NorthwestTerritory);
-//         Countries.add(Ontario);
-//         Countries.add(Quebec);
-//         Countries.add(WesternUnitedStates);
-//         Countries.add(Argentina);
-//         Countries.add(Brazil);
-//         Countries.add(Peru);
-//         Countries.add(Venezuela);
-//         Countries.add(GreatBritain);
-//         Countries.add(Iceland);
-//         Countries.add(NorthernEurope);
-//         Countries.add(Scandanavia);
-//         Countries.add(SouthernEurope);
-//         Countries.add(Ukraine);
-//         Countries.add(WesternEurope);
-//         Countries.add(Congo);
-//         Countries.add(EastAfrica);
-//         Countries.add(Egypt);
-//         Countries.add(Madagascar);
-//         Countries.add(NorthAfrica);
-//         Countries.add(SouthAfrica);
-//         Countries.add(Afghanistan);
-//         Countries.add(China);
-//         Countries.add(India);
-//         Countries.add(Irkutsk);
-//         Countries.add(Japan);
-//         Countries.add(Kamchatka);
-//         Countries.add(MiddleEast);
-//         Countries.add(Mongolia);
-//         Countries.add(Siam);
-//         Countries.add(Siberia);
-//         Countries.add(Ural);
-//         Countries.add(Yakutsk);
-//         Countries.add(EasternAustralia);
-//         Countries.add(Indonesia);
-//         Countries.add(NewGuinea);
-//         Countries.add(WesternAustralia);Countries.add(Alaska);
-//         Countries.add(Alberta);
-//         Countries.add(CentralAmerica);
-//         Countries.add(EasternUnitedStates);
-//         Countries.add(Greenland);
-//         Countries.add(NorthwestTerritory);
-//         Countries.add(Ontario);
-//         Countries.add(Quebec);
-//         Countries.add(WesternUnitedStates);
-//         Countries.add(Argentina);
-//         Countries.add(Brazil);
-//         Countries.add(Peru);
-//         Countries.add(Venezuela);
-//         Countries.add(GreatBritain);
-//         Countries.add(Iceland);
-//         Countries.add(NorthernEurope);
-//         Countries.add(Scandanavia);
-//         Countries.add(SouthernEurope);
-//         Countries.add(Ukraine);
-//         Countries.add(WesternEurope);
-//         Countries.add(Congo);
-//         Countries.add(EastAfrica);
-//         Countries.add(Egypt);
-//         Countries.add(Madagascar);
-//         Countries.add(NorthAfrica);
-//         Countries.add(SouthAfrica);
-//         Countries.add(Afghanistan);
-//         Countries.add(China);
-//         Countries.add(India);
-//         Countries.add(Irkutsk);
-//         Countries.add(Japan);
-//         Countries.add(Kamchatka);
-//         Countries.add(MiddleEast);
-//         Countries.add(Mongolia);
-//         Countries.add(Siam);
-//         Countries.add(Siberia);
-//         Countries.add(Ural);
-//         Countries.add(Yakutsk);
-//         Countries.add(EasternAustralia);
-//         Countries.add(Indonesia);
-//         Countries.add(NewGuinea);
-//         Countries.add(WesternAustralia);
-//     }
+    Continent NorthAmerica = new Continent("North America", 5, NorthAmericaCountries);
+    Continent SouthAmerica = new Continent("South America", 2, SouthAmericaCountries);
+    Continent Europe = new Continent("Europe", 5, EuropeCountries);
+    Continent Africa = new Continent("Africa", 3, AfricaCountries);
+    Continent Asia = new Continent("Asia", 7, AsiaCountries);
+    Continent Australia = new Continent("australia", 2, AustraliaCountries);
 }
