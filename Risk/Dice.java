@@ -10,9 +10,11 @@ public class Dice
     public Dice()
     {
     }
-    public int[] roll(int numberOfDice) {
+    public int[] roll(int numberOfDice) 
+    {
 		diceArray = new int[numberOfDice];
-		for(int i = 0; i < diceArray.length; i++) {
+		for(int i = 0; i < diceArray.length; i++) 
+		{
 			die = new Random();
 			roll = die.nextInt(5) + 1;
 			diceArray[i] = roll;
