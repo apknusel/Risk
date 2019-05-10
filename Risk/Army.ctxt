@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.params=player
+comment0.target=Army(java.lang.String)
+comment1.params=newTroop
+comment1.target=void\ addTroopToArmy(Troop)
+comment2.params=deadTroop
+comment2.target=void\ troopDied(Troop)
+comment3.params=
+comment3.target=int\ sizeOfArmy()
+comment4.params=attacker\ defender\ attacking\ defending
+comment4.target=void\ battleOfTroops(Player,\ Player,\ Country,\ Country)
+numComments=5
