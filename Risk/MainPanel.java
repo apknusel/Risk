@@ -18,10 +18,11 @@ public class MainPanel extends JApplet implements ActionListener
 
       JPanel content = new JPanel();
       setContentPane(content);
+    
       
        content.setBackground(Color.GRAY);
        content.setBackground(Color.GRAY);
-       content.setLayout( new GridLayout(3,1,3,3) );
+       content.setLayout( new FlowLayout() );
        message = new JLabel("Click a button to open a dialog", JLabel.CENTER);
        message.setForeground(new Color(180,0,0));
        message.setBackground(Color.WHITE);
@@ -30,12 +31,12 @@ public class MainPanel extends JApplet implements ActionListener
 
        JPanel buttonBar;
        JButton button;
-
        buttonBar = new JPanel();
-       buttonBar.setLayout(new GridLayout(1,2,3,3));
+       buttonBar.setLayout(new GridLayout(3,1));
        buttonBar.setBackground(Color.GRAY);
        content.add(buttonBar);
        button = new JButton("Input Dialog");
+       button.setPreferredSize(new Dimension(40, 40));
        button.addActionListener(this);
        buttonBar.add(button);
        content.setBorder(BorderFactory.createLineBorder(Color.GRAY,3));
@@ -45,11 +46,12 @@ public class MainPanel extends JApplet implements ActionListener
        BufferedImage image1 = null;
 
         try {
-            image1 = ImageIO.read(new File("Map.jpg"));
+            image1 = ImageIO.read(new File("rsz_map.jpg"));
         }
         catch(Exception e){}
         
         JLabel label = new JLabel(new ImageIcon(image1));
+        JPanel card2 = new JPanel();
         content.add(label);
    } // end init()
    
