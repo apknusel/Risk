@@ -2,5 +2,5 @@
 comment0.params=
 comment0.target=Dice()
 comment1.params=numberOfDice
-comment1.target=int[]\ roll(int)
+comment1.target=java.util.ArrayList\ roll(int)
 numComments=2

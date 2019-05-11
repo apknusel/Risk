@@ -44,7 +44,14 @@ public class Army
                 isNeighbour = true;
         }
         
-        if (isNeighbour == true)
+        for (int i = 0; i < attackingArmy.troops.size(); i++)
+        {
+            Troop currentTroop = attackingArmy.troops.get(i);
+            if (currentTroop.getWhereLocated() == attacking)
+                attackers.add(currentTroop);
+        }
+        
+        if (isNeighbour == true && attackers.size() != 0)
         {
             for (int i = 0; i < defendingArmy.troops.size(); i++)
             {
@@ -53,25 +60,84 @@ public class Army
                     defenders.add(currentTroop);
             }
             
-            for (int i = 0; i < attackingArmy.troops.size(); i++)
-            {
-                Troop currentTroop = attackingArmy.troops.get(i);
-                if (currentTroop.getWhereLocated() == attacking)
-                    attackers.add(currentTroop);
-            }
-            
-            if (defenders.size() >= 3)
+            if (defenders.size() >= 2)
                 defenderDice = 2;
             else
-                defenderDice = defenders.size();
+                defenderDice = 1;
                 
             if (attackers.size() >= 4)
-                attackerDice = 2;
+                attackerDice = 3;
             else
-                attackerDice = attackers.size();
+                attackerDice = attackers.size() - 1;
                 
             Dice dice = new Dice();
+            ArrayList<Integer> defenderNumbers = dice.roll(defenderDice);
+            ArrayList<Integer> attackerNumbers = dice.roll(attackerDice);
             
+            if (defenderDice > attackerDice)
+                defenderNumbers.remove(0);
+            else if (attackerDice - defenderDice == 2)
+            {
+                attackerNumbers.remove(0);
+                attackerNumbers.remove(0);
+            }
+            else if (attackerDice - defenderDice == 1)
+                attackerNumbers.remove(0);
+            
+            if (attackerNumbers.get(0) > defenderNumbers.get(0))
+            {
+                boolean found = false;
+                for (int i = 0; i < defendingArmy.troops.size() || found; i++)
+                {
+                    if (defendingArmy.troops.get(i).getWhereLocated() == defending)
+                    {
+                        defendingArmy.troops.remove(i);
+                        found = true;
+                    }
+                }
+            }
+            
+            if (attackerNumbers.get(0) < defenderNumbers.get(0))
+            {
+                boolean found = false;
+                for (int i = 0; i < attackingArmy.troops.size() || found; i++)
+                {
+                    if (attackingArmy.troops.get(i).getWhereLocated() == attacking)
+                    {
+                        attackingArmy.troops.remove(i);
+                        found = true;
+                    }
+                }
+            }
+            
+            if (attackerNumbers.size() == 2)
+            {
+                if (attackerNumbers.get(1) > defenderNumbers.get(1))
+                {
+                    boolean found = false;
+                    for (int i = 0; i < defendingArmy.troops.size() || found; i++)
+                    {
+                        if (defendingArmy.troops.get(i).getWhereLocated() == defending)
+                        {
+                            defendingArmy.troops.remove(i);
+                            found = true;
+                        }
+                    }
+                }
+                
+                if (attackerNumbers.get(1) < defenderNumbers.get(1))
+                {
+                    boolean found = false;
+                    for (int i = 0; i < attackingArmy.troops.size() || found; i++)
+                    {
+                        if (attackingArmy.troops.get(i).getWhereLocated() == attacking)
+                        {
+                            attackingArmy.troops.remove(i);
+                            found = true;
+                        }
+                    }
+                }
+            }
         }
     }
 }
