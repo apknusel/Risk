@@ -1,4 +1,6 @@
 #BlueJ class context
 comment0.params=
 comment0.target=void\ setAdjacentCountries()
-numComments=1
+comment1.params=country
+comment1.target=Country\ getCountry(java.lang.String)
+numComments=2
