@@ -11,8 +11,16 @@ public class Runner
         Army alexsArmy = new Army("Alex");
         Player arthur = new Player(arthursArmy);
         Player alex = new Player(alexsArmy);
+        CountriesContinents cc = new CountriesContinents();
+        cc.setAdjacentCountries();
+        Country Alaska = cc.getCountry("Alaska");
+        //Alaska.getAdjacentCountries();
         Troop firstTroop = new Troop("Artillery", Alaska);
-        System.out.println(arthur.getArmy().sizeOfArmy());
+        arthursArmy.addTroopToArmy(firstTroop);
+        Country Alberta = cc.getCountry("Alberta");
+        Troop secondTroop = new Troop("Artillery", Alberta);
+        alexsArmy.addTroopToArmy(secondTroop);
+        //arthursArmy.battleOfTroops(arthur, alex, Alaska, Alberta);
     }
 
 }
