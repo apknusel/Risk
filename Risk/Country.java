@@ -58,4 +58,12 @@ public class Country
     {
         return continent;
     }
+    
+    public String toString()
+    {
+        String newString = "";
+        newString += name;
+        newString += troops;
+        return newString;
+    }
 }

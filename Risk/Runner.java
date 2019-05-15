@@ -14,6 +14,8 @@ public class Runner
         CountriesContinents cc = new CountriesContinents();
         cc.setAdjacentCountries();
         Country Alaska = cc.getCountry("Alaska");
+        System.out.println(Alaska);
+        System.out.println(Alaska.getName());
         //Alaska.getAdjacentCountries();
         Troop firstTroop = new Troop("Artillery", Alaska);
         arthursArmy.addTroopToArmy(firstTroop);

@@ -87,16 +87,17 @@ public class CountriesContinents
     Country[] IndonesiaNeighbours = {EasternAustralia, NewGuinea};
     Country[] NewGuineaNeighbours = {EasternAustralia, Indonesia, WesternAustralia};
     Country[] WesternAustraliaNeighbours = {EasternAustralia, Indonesia, NewGuinea};
-    
+
     
     public void setAdjacentCountries()
     {
+        System.out.println(Indonesia.toString());
         Alaska.setAdjacentCountries(AlaskaNeighbours);
         for (int i = 0; i < AlaskaNeighbours.length; i++)
         {
             System.out.println(AlaskaNeighbours[i].getName());
         }
- 
+        
         Alberta.setAdjacentCountries(AlbertaNeighbours);
         CentralAmerica.setAdjacentCountries(CentralAmericaNeighbours);
         EasternUnitedStates.setAdjacentCountries(EasternUnitedStatesNeighbours);
