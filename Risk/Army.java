@@ -37,17 +37,18 @@ public class Army
         int attackerDice;
         int[] attackingNumbers = new int[2];
         int[] defendingNumbers = new int[2];
+       
         
         for (int i = 0; i < attackingCountryNeighbours.length; i++)
         {
-            if (attackingCountryNeighbours[i] == defending)
+            if (attackingCountryNeighbours[i].getName() == defending.getName())
                 isNeighbour = true;
         }
         
         for (int i = 0; i < attackingArmy.troops.size(); i++)
         {
             Troop currentTroop = attackingArmy.troops.get(i);
-            if (currentTroop.getWhereLocated() == attacking)
+            if (currentTroop.getWhereLocated().getName().equals(attacking.getName()))
                 attackers.add(currentTroop);
         }
         
@@ -56,7 +57,7 @@ public class Army
             for (int i = 0; i < defendingArmy.troops.size(); i++)
             {
                 Troop currentTroop = defendingArmy.troops.get(i);
-                if (currentTroop.getWhereLocated() == defending)
+                if (currentTroop.getWhereLocated().getName() == defending.getName())
                     defenders.add(currentTroop);
             }
             
@@ -69,6 +70,8 @@ public class Army
                 attackerDice = 3;
             else
                 attackerDice = attackers.size() - 1;
+                
+            //works up to here
                 
             Dice dice = new Dice();
             ArrayList<Integer> defenderNumbers = dice.roll(defenderDice);

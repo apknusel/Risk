@@ -1,5 +1,5 @@
 #BlueJ class context
-comment0.params=type\ whereLocated
+comment0.params=typeOfTroop\ whereLocatedNow
 comment0.target=Troop(java.lang.String,\ Country)
 comment1.params=
 comment1.target=Country\ getWhereLocated()

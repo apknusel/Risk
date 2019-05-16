@@ -3,10 +3,10 @@ public class Troop
     String type;
     Country whereLocated;
     
-    public Troop(String type, Country whereLocated)
+    public Troop(String typeOfTroop, Country whereLocatedNow)
     {
-        type = type;
-        whereLocated = whereLocated;
+        type = typeOfTroop;
+        whereLocated = whereLocatedNow;
     }
 
     public Country getWhereLocated()

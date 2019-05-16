@@ -16,13 +16,13 @@ public class Runner
         Country Alaska = cc.getCountry("Alaska");
         Country Congo = cc.getCountry("Congo");
         Troop firstTroop = new Troop("Artillery", Alaska);
+        Troop secondTroop = new Troop("Artillery", Alaska);
         arthursArmy.addTroopToArmy(firstTroop);
+        arthursArmy.addTroopToArmy(secondTroop);
         Country Alberta = cc.getCountry("Alberta");
-        Troop secondTroop = new Troop("Artillery", Alberta);
-        alexsArmy.addTroopToArmy(secondTroop);
+        Troop thirdTroop = new Troop("Artillery", Alberta);
+        alexsArmy.addTroopToArmy(thirdTroop);
         arthursArmy.battleOfTroops(arthur, alex, Alaska, Alberta);
-        System.out.println(arthursArmy.sizeOfArmy());
-        System.out.println(alexsArmy.sizeOfArmy());
     }
 
 }
