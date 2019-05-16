@@ -14,15 +14,15 @@ public class Runner
         CountriesContinents cc = new CountriesContinents();
         cc.setAdjacentCountries();
         Country Alaska = cc.getCountry("Alaska");
-        System.out.println(Alaska);
-        System.out.println(Alaska.getName());
-        //Alaska.getAdjacentCountries();
+        Country Congo = cc.getCountry("Congo");
         Troop firstTroop = new Troop("Artillery", Alaska);
         arthursArmy.addTroopToArmy(firstTroop);
         Country Alberta = cc.getCountry("Alberta");
         Troop secondTroop = new Troop("Artillery", Alberta);
         alexsArmy.addTroopToArmy(secondTroop);
-        //arthursArmy.battleOfTroops(arthur, alex, Alaska, Alberta);
+        arthursArmy.battleOfTroops(arthur, alex, Alaska, Alberta);
+        System.out.println(arthursArmy.sizeOfArmy());
+        System.out.println(alexsArmy.sizeOfArmy());
     }
 
 }

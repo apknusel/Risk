@@ -91,13 +91,7 @@ public class CountriesContinents
     
     public void setAdjacentCountries()
     {
-        System.out.println(Indonesia.toString());
         Alaska.setAdjacentCountries(AlaskaNeighbours);
-        for (int i = 0; i < AlaskaNeighbours.length; i++)
-        {
-            System.out.println(AlaskaNeighbours[i].getName());
-        }
-        
         Alberta.setAdjacentCountries(AlbertaNeighbours);
         CentralAmerica.setAdjacentCountries(CentralAmericaNeighbours);
         EasternUnitedStates.setAdjacentCountries(EasternUnitedStatesNeighbours);
@@ -149,23 +143,12 @@ public class CountriesContinents
     Country[] AsiaCountries = {Afghanistan, China, India, Irkutsk, Japan, Kamchatka, MiddleEast, Mongolia, Siam, Siberia, Ural, Yakutsk};
     Country[] AustraliaCountries = {EasternAustralia, Indonesia, NewGuinea, WesternAustralia};
 
-    
-    public void setContinents()
-    {
-        Continent NorthAmerica = new Continent("North America", 5, NorthAmericaCountries);
-        Continent SouthAmerica = new Continent("South America", 2, SouthAmericaCountries);
-        Continent Europe = new Continent("Europe", 5, EuropeCountries);
-        Continent Africa = new Continent("Africa", 3, AfricaCountries);
-        Continent Asia = new Continent("Asia", 7, AsiaCountries);
-        Continent Australia = new Continent("Australia", 2, AustraliaCountries);
-    }
-    
-    public void setEverything()
-    {
-        setAdjacentCountries();
-        setContinents();
-        System.out.println(Alberta);
-    }
+    Continent NorthAmerica = new Continent("North America", 5, NorthAmericaCountries);
+    Continent SouthAmerica = new Continent("South America", 2, SouthAmericaCountries);
+    Continent Europe = new Continent("Europe", 5, EuropeCountries);
+    Continent Africa = new Continent("Africa", 3, AfricaCountries);
+    Continent Asia = new Continent("Asia", 7, AsiaCountries);
+    Continent Australia = new Continent("Australia", 2, AustraliaCountries);
     
     public Country getCountry(String country)
     {

@@ -2,14 +2,13 @@ import java.util.ArrayList;
 public class Continent
 {
     private String name;
-    private int bArmies;
+    private int bonusArmies;
     private Country[] countries;
-    public Continent(String name, int bArmies, Country[] memberCountries)
+    public Continent(String nameOfContinent, int bArmies, Country[] memberCountries)
     {
-		this.name = name;
-		this.bArmies = bArmies;
+		name = nameOfContinent;
+		bonusArmies = bArmies;
 		countries = memberCountries;
-		System.out.println("Created continent: " + name + "\nBonus armies: " + bArmies);
     }
     
     public String getName()
@@ -19,7 +18,7 @@ public class Continent
     
     public int getBonusArmies()
     {
-		return bArmies;
+		return bonusArmies;
     }
     
     public Country[] getCountries()

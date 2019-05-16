@@ -1,5 +1,5 @@
 #BlueJ class context
-comment0.params=name\ bArmies\ memberCountries
+comment0.params=nameOfContinent\ bArmies\ memberCountries
 comment0.target=Continent(java.lang.String,\ int,\ Country[])
 comment1.params=
 comment1.target=java.lang.String\ getName()
