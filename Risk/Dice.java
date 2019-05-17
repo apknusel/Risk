@@ -10,12 +10,11 @@ public class Dice
     }
     public ArrayList<Integer> roll(int numberOfDice) 
     {
-		diceArray = new ArrayList<Integer>();
-		for(int i = 0; i < diceArray.size(); i++) 
+		diceArray = new ArrayList<Integer>(numberOfDice);
+		for(int i = 0; i < numberOfDice; i++) 
 		{
-			die = new Random();
-			roll = die.nextInt(5) + 1;
-			diceArray.set(i, roll);
+			roll = (int) (Math.random() * 6) + 1;
+			diceArray.add(roll);
 		}
 		Collections.sort(diceArray);
 		Collections.reverse(Arrays.asList(diceArray));

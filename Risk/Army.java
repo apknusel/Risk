@@ -37,7 +37,6 @@ public class Army
         int attackerDice;
         int[] attackingNumbers = new int[2];
         int[] defendingNumbers = new int[2];
-       
         
         for (int i = 0; i < attackingCountryNeighbours.length; i++)
         {
@@ -71,8 +70,6 @@ public class Army
             else
                 attackerDice = attackers.size() - 1;
                 
-            //works up to here
-                
             Dice dice = new Dice();
             ArrayList<Integer> defenderNumbers = dice.roll(defenderDice);
             ArrayList<Integer> attackerNumbers = dice.roll(attackerDice);
@@ -86,13 +83,23 @@ public class Army
             }
             else if (attackerDice - defenderDice == 1)
                 attackerNumbers.remove(0);
+                
+            for (int i = 0; i < defenderNumbers.size(); i++)
+            {
+                System.out.println(defenderNumbers.get(i));
+            }
+            System.out.println(":");
+            for (int i = 0; i < attackerNumbers.size(); i++)
+            {
+                System.out.println(attackerNumbers.get(i));
+            }
             
             if (attackerNumbers.get(0) > defenderNumbers.get(0))
             {
                 boolean found = false;
-                for (int i = 0; i < defendingArmy.troops.size() || found; i++)
+                for (int i = 0; i < defendingArmy.troops.size() && !found; i++)
                 {
-                    if (defendingArmy.troops.get(i).getWhereLocated() == defending)
+                    if (defendingArmy.troops.get(i).getWhereLocated().getName() == defending.getName())
                     {
                         defendingArmy.troops.remove(i);
                         found = true;
@@ -100,12 +107,12 @@ public class Army
                 }
             }
             
-            if (attackerNumbers.get(0) < defenderNumbers.get(0))
+            if (attackerNumbers.get(0) <= defenderNumbers.get(0))
             {
                 boolean found = false;
-                for (int i = 0; i < attackingArmy.troops.size() || found; i++)
+                for (int i = 0; i < attackingArmy.troops.size() && !found; i++)
                 {
-                    if (attackingArmy.troops.get(i).getWhereLocated() == attacking)
+                    if (attackingArmy.troops.get(i).getWhereLocated().getName() == attacking.getName())
                     {
                         attackingArmy.troops.remove(i);
                         found = true;
@@ -118,9 +125,9 @@ public class Army
                 if (attackerNumbers.get(1) > defenderNumbers.get(1))
                 {
                     boolean found = false;
-                    for (int i = 0; i < defendingArmy.troops.size() || found; i++)
+                    for (int i = 0; i < defendingArmy.troops.size() && !found; i++)
                     {
-                        if (defendingArmy.troops.get(i).getWhereLocated() == defending)
+                        if (defendingArmy.troops.get(i).getWhereLocated().getName() == defending.getName())
                         {
                             defendingArmy.troops.remove(i);
                             found = true;
@@ -128,12 +135,12 @@ public class Army
                     }
                 }
                 
-                if (attackerNumbers.get(1) < defenderNumbers.get(1))
+                if (attackerNumbers.get(1) <= defenderNumbers.get(1))
                 {
                     boolean found = false;
-                    for (int i = 0; i < attackingArmy.troops.size() || found; i++)
+                    for (int i = 0; i < attackingArmy.troops.size() && !found; i++)
                     {
-                        if (attackingArmy.troops.get(i).getWhereLocated() == attacking)
+                        if (attackingArmy.troops.get(i).getWhereLocated().getName() == attacking.getName())
                         {
                             attackingArmy.troops.remove(i);
                             found = true;
