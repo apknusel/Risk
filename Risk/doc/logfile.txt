@@ -1,6 +1,10 @@
 Class documentation
 <---- javadoc command: ---->
+<<<<<<< HEAD
 C:\Program Files (x86)\Java\jdk1.8.0_101\bin\javadoc.exe
+=======
+C:\Program Files\Java\jdk1.8.0_101\bin\javadoc.exe
+>>>>>>> 8d35cfb2bd96596ac6dda31227a4010f1a85144b
 -author
 -version
 -nodeprecated
@@ -16,9 +20,15 @@ post:a:Postcondition:
 -source
 1.8
 -classpath
+<<<<<<< HEAD
 C:\Program Files (x86)\BlueJ\lib\bluejcore.jar;C:\Program Files (x86)\BlueJ\lib\junit-4.8.2.jar;C:\Program Files (x86)\BlueJ\lib\userlib\pi4j-core.jar;C:\Program Files (x86)\BlueJ\lib\userlib\pi4j-device.jar;C:\Program Files (x86)\BlueJ\lib\userlib\pi4j-gpio-extension.jar;C:\Program Files (x86)\BlueJ\lib\userlib\pi4j-service.jar;C:\Users\apknusel\Desktop\final-project-2019-awgraham\Risk
 -d
 C:\Users\apknusel\Desktop\final-project-2019-awgraham\Risk\doc
+=======
+C:\Program Files (x86)\BlueJ\lib\bluejcore.jar;C:\Program Files (x86)\BlueJ\lib\junit-4.8.2.jar;C:\Users\awgraham\Desktop\Github\picture-color-labs-awgraham\ColorLabs17\bookClasses;C:\Program Files (x86)\BlueJ\lib\userlib\pi4j-core.jar;C:\Program Files (x86)\BlueJ\lib\userlib\pi4j-device.jar;C:\Program Files (x86)\BlueJ\lib\userlib\pi4j-gpio-extension.jar;C:\Program Files (x86)\BlueJ\lib\userlib\pi4j-service.jar;C:\Users\awgraham\Desktop\Github\final-project-2019-awgraham\Risk
+-d
+C:\Users\awgraham\Desktop\Github\final-project-2019-awgraham\Risk\doc
+>>>>>>> 8d35cfb2bd96596ac6dda31227a4010f1a85144b
 -encoding
 UTF-8
 -charset
@@ -27,6 +37,7 @@ UTF-8
 C:\Program Files (x86)\BlueJ\lib\bjdoclet.jar
 -doclet
 bluej.doclet.doclets.formats.html.HtmlDoclet
+<<<<<<< HEAD
 C:\Users\apknusel\Desktop\final-project-2019-awgraham\Risk\Player.java
 <---- end of javadoc command ---->
 Loading source file C:\Users\apknusel\Desktop\final-project-2019-awgraham\Risk\Player.java...
@@ -45,3 +56,285 @@ Generating C:\Users\apknusel\Desktop\final-project-2019-awgraham\Risk\doc\index.
 Generating C:\Users\apknusel\Desktop\final-project-2019-awgraham\Risk\doc\stylesheet.css...
 Note: Custom tags that could override future standard tags:  @pre, @post. To avoid potential overrides, use at least one period character (.) in custom tag names.
 Note: Custom tags that were not seen:  @pre, @post
+=======
+C:\Users\awgraham\Desktop\Github\final-project-2019-awgraham\Risk\MainPanel.java
+<---- end of javadoc command ---->
+Loading source file C:\Users\awgraham\Desktop\Github\final-project-2019-awgraham\Risk\MainPanel.java...
+Constructing Javadoc information...
+Standard Doclet version 1.8.0_101
+Building tree for all the packages and classes...
+Generating C:\Users\awgraham\Desktop\Github\final-project-2019-awgraham\Risk\doc\MainPanel.html...
+Generating C:\Users\awgraham\Desktop\Github\final-project-2019-awgraham\Risk\doc\package-frame.html...
+Generating C:\Users\awgraham\Desktop\Github\final-project-2019-awgraham\Risk\doc\package-summary.html...
+Generating C:\Users\awgraham\Desktop\Github\final-project-2019-awgraham\Risk\doc\constant-values.html...
+Generating C:\Users\awgraham\Desktop\Github\final-project-2019-awgraham\Risk\doc\serialized-form.html...
+C:\Users\awgraham\Desktop\Github\picture-color-labs-awgraham\ColorLabs17\bookClasses\World.java:38: error: cannot find symbol
+  private Picture picture = null;
+          ^
+  symbol:   class Picture
+  location: class World
+C:\Users\awgraham\Desktop\Github\picture-color-labs-awgraham\ColorLabs17\bookClasses\World.java:118: error: cannot find symbol
+  public Picture getPicture() { return picture; }
+         ^
+  symbol:   class Picture
+  location: class World
+C:\Users\awgraham\Desktop\Github\picture-color-labs-awgraham\ColorLabs17\bookClasses\World.java:124: error: cannot find symbol
+  public void setPicture(Picture pict) { picture = pict; }
+                         ^
+  symbol:   class Picture
+  location: class World
+C:\Users\awgraham\Desktop\Github\picture-color-labs-awgraham\ColorLabs17\bookClasses\Turtle.java:22: error: cannot find symbol
+  public Turtle (int x, int y, Picture picture) 
+                               ^
+  symbol:   class Picture
+  location: class Turtle
+C:\Users\awgraham\Desktop\Github\picture-color-labs-awgraham\ColorLabs17\bookClasses\Turtle.java:54: error: cannot find symbol
+  public Turtle (Picture p)
+                 ^
+  symbol:   class Picture
+  location: class Turtle
+C:\Users\awgraham\Desktop\Github\picture-color-labs-awgraham\ColorLabs17\bookClasses\SimpleTurtle.java:37: error: cannot find symbol
+  private Picture picture = null;
+          ^
+  symbol:   class Picture
+  location: class SimpleTurtle
+C:\Users\awgraham\Desktop\Github\picture-color-labs-awgraham\ColorLabs17\bookClasses\SimpleTurtle.java:128: error: cannot find symbol
+  public SimpleTurtle(int x, int y, Picture picture)
+                                    ^
+  symbol:   class Picture
+  location: class SimpleTurtle
+C:\Users\awgraham\Desktop\Github\picture-color-labs-awgraham\ColorLabs17\bookClasses\SimpleTurtle.java:140: error: cannot find symbol
+  public SimpleTurtle(Picture picture)
+                      ^
+  symbol:   class Picture
+  location: class SimpleTurtle
+C:\Users\awgraham\Desktop\Github\picture-color-labs-awgraham\ColorLabs17\bookClasses\SimpleTurtle.java:212: error: cannot find symbol
+  public Picture getPicture() { return this.picture; }
+         ^
+  symbol:   class Picture
+  location: class SimpleTurtle
+C:\Users\awgraham\Desktop\Github\picture-color-labs-awgraham\ColorLabs17\bookClasses\SimpleTurtle.java:218: error: cannot find symbol
+  public void setPicture(Picture pict) { this.picture = pict; }
+                         ^
+  symbol:   class Picture
+  location: class SimpleTurtle
+C:\Users\awgraham\Desktop\Github\picture-color-labs-awgraham\ColorLabs17\bookClasses\SimpleTurtle.java:587: error: cannot find symbol
+  public synchronized void drop(Picture dropPicture) 
+                                ^
+  symbol:   class Picture
+  location: class SimpleTurtle
+C:\Users\awgraham\Desktop\Github\picture-color-labs-awgraham\ColorLabs17\bookClasses\FrameSequencer.java:35: error: cannot find symbol
+  private List<Picture> pictureList = new ArrayList<Picture>();
+               ^
+  symbol:   class Picture
+  location: class FrameSequencer
+C:\Users\awgraham\Desktop\Github\picture-color-labs-awgraham\ColorLabs17\bookClasses\FrameSequencer.java:158: error: cannot find symbol
+  public void addFrame(Picture picture)
+                       ^
+  symbol:   class Picture
+  location: class FrameSequencer
+C:\Users\awgraham\Desktop\Github\picture-color-labs-awgraham\ColorLabs17\bookClasses\MoviePlayer.java:30: error: cannot find symbol
+  public MoviePlayer(List<Picture> pictureList)
+                          ^
+  symbol:   class Picture
+  location: class MoviePlayer
+C:\Users\awgraham\Desktop\Github\picture-color-labs-awgraham\ColorLabs17\bookClasses\MoviePlayer.java:165: error: cannot find symbol
+  public void addPicture(Picture picture)
+                         ^
+  symbol:   class Picture
+  location: class MoviePlayer
+C:\Users\awgraham\Desktop\Github\picture-color-labs-awgraham\ColorLabs17\bookClasses\AnimationPanel.java:43: error: cannot find symbol
+  public AnimationPanel(List<Picture> pictList)
+                             ^
+  symbol:   class Picture
+  location: class AnimationPanel
+C:\Users\awgraham\Desktop\Github\picture-color-labs-awgraham\ColorLabs17\bookClasses\AnimationPanel.java:146: error: cannot find symbol
+  public void add(Picture picture)
+                  ^
+  symbol:   class Picture
+  location: class AnimationPanel
+C:\Users\awgraham\Desktop\Github\picture-color-labs-awgraham\ColorLabs17\bookClasses\SimplePicture.java:532: error: cannot find symbol
+  public Picture scale(double xFactor, double yFactor)
+         ^
+  symbol:   class Picture
+  location: class SimplePicture
+C:\Users\awgraham\Desktop\Github\picture-color-labs-awgraham\ColorLabs17\bookClasses\SimplePicture.java:559: error: cannot find symbol
+  public Picture getPictureWithWidth(int width)
+         ^
+  symbol:   class Picture
+  location: class SimplePicture
+C:\Users\awgraham\Desktop\Github\picture-color-labs-awgraham\ColorLabs17\bookClasses\SimplePicture.java:574: error: cannot find symbol
+  public Picture getPictureWithHeight(int height)
+         ^
+  symbol:   class Picture
+  location: class SimplePicture
+C:\Users\awgraham\Desktop\Github\picture-color-labs-awgraham\ColorLabs17\bookClasses\PictureFrame.java:67: error: cannot find symbol
+  public void setPicture(Picture picture)
+                         ^
+  symbol:   class Picture
+  location: class PictureFrame
+C:\Users\awgraham\Desktop\Github\picture-color-labs-awgraham\ColorLabs17\bookClasses\Pictureold.java:17: error: class Picture is public, should be declared in a file named Picture.java
+public class Picture extends SimplePicture
+       ^
+C:\Users\awgraham\Desktop\Github\picture-color-labs-awgraham\ColorLabs17\bookClasses\MovieWriter.java:7: error: package ch.randelshofer.media.avi does not exist
+import ch.randelshofer.media.avi.AVIOutputStream;
+                                ^
+C:\Users\awgraham\Desktop\Github\picture-color-labs-awgraham\ColorLabs17\bookClasses\JpegImagesToMovie.java:35: error: package javax.media does not exist
+import javax.media.*;
+^
+C:\Users\awgraham\Desktop\Github\picture-color-labs-awgraham\ColorLabs17\bookClasses\JpegImagesToMovie.java:36: error: package javax.media.control does not exist
+import javax.media.control.*;
+^
+C:\Users\awgraham\Desktop\Github\picture-color-labs-awgraham\ColorLabs17\bookClasses\JpegImagesToMovie.java:37: error: package javax.media.protocol does not exist
+import javax.media.protocol.*;
+^
+C:\Users\awgraham\Desktop\Github\picture-color-labs-awgraham\ColorLabs17\bookClasses\JpegImagesToMovie.java:38: error: package javax.media.protocol does not exist
+import javax.media.protocol.DataSource;
+                           ^
+C:\Users\awgraham\Desktop\Github\picture-color-labs-awgraham\ColorLabs17\bookClasses\JpegImagesToMovie.java:39: error: package javax.media.datasink does not exist
+import javax.media.datasink.*;
+^
+C:\Users\awgraham\Desktop\Github\picture-color-labs-awgraham\ColorLabs17\bookClasses\JpegImagesToMovie.java:40: error: package javax.media.format does not exist
+import javax.media.format.VideoFormat;
+                         ^
+C:\Users\awgraham\Desktop\Github\picture-color-labs-awgraham\ColorLabs17\bookClasses\JpegImagesToMovie.java:51: error: cannot find symbol
+public class JpegImagesToMovie implements ControllerListener, 
+                                          ^
+  symbol: class ControllerListener
+C:\Users\awgraham\Desktop\Github\picture-color-labs-awgraham\ColorLabs17\bookClasses\JpegImagesToMovie.java:52: error: cannot find symbol
+  DataSinkListener {
+  ^
+  symbol: class DataSinkListener
+C:\Users\awgraham\Desktop\Github\picture-color-labs-awgraham\ColorLabs17\bookClasses\JpegImagesToMovie.java:68: error: cannot find symbol
+                               MediaLocator outML) {
+                               ^
+  symbol:   class MediaLocator
+  location: class JpegImagesToMovie
+C:\Users\awgraham\Desktop\Github\picture-color-labs-awgraham\ColorLabs17\bookClasses\JpegImagesToMovie.java:120: error: cannot find symbol
+                         MediaLocator outML) {
+                         ^
+  symbol:   class MediaLocator
+  location: class JpegImagesToMovie
+C:\Users\awgraham\Desktop\Github\picture-color-labs-awgraham\ColorLabs17\bookClasses\JpegImagesToMovie.java:137: error: cannot find symbol
+                      MediaLocator outML,
+                      ^
+  symbol:   class MediaLocator
+  location: class JpegImagesToMovie
+C:\Users\awgraham\Desktop\Github\picture-color-labs-awgraham\ColorLabs17\bookClasses\JpegImagesToMovie.java:233: error: cannot find symbol
+                      MediaLocator outML,
+                      ^
+  symbol:   class MediaLocator
+  location: class JpegImagesToMovie
+C:\Users\awgraham\Desktop\Github\picture-color-labs-awgraham\ColorLabs17\bookClasses\JpegImagesToMovie.java:323: error: cannot find symbol
+  DataSink createDataSink(Processor p, MediaLocator outML) {
+                          ^
+  symbol:   class Processor
+  location: class JpegImagesToMovie
+C:\Users\awgraham\Desktop\Github\picture-color-labs-awgraham\ColorLabs17\bookClasses\JpegImagesToMovie.java:323: error: cannot find symbol
+  DataSink createDataSink(Processor p, MediaLocator outML) {
+                                       ^
+  symbol:   class MediaLocator
+  location: class JpegImagesToMovie
+C:\Users\awgraham\Desktop\Github\picture-color-labs-awgraham\ColorLabs17\bookClasses\JpegImagesToMovie.java:323: error: cannot find symbol
+  DataSink createDataSink(Processor p, MediaLocator outML) {
+  ^
+  symbol:   class DataSink
+  location: class JpegImagesToMovie
+C:\Users\awgraham\Desktop\Github\picture-color-labs-awgraham\ColorLabs17\bookClasses\JpegImagesToMovie.java:354: error: cannot find symbol
+  boolean waitForState(Processor p, int state) {
+                       ^
+  symbol:   class Processor
+  location: class JpegImagesToMovie
+C:\Users\awgraham\Desktop\Github\picture-color-labs-awgraham\ColorLabs17\bookClasses\JpegImagesToMovie.java:368: error: cannot find symbol
+  public void controllerUpdate(ControllerEvent evt) {
+                               ^
+  symbol:   class ControllerEvent
+  location: class JpegImagesToMovie
+C:\Users\awgraham\Desktop\Github\picture-color-labs-awgraham\ColorLabs17\bookClasses\JpegImagesToMovie.java:410: error: cannot find symbol
+  public void dataSinkUpdate(DataSinkEvent evt) {
+                             ^
+  symbol:   class DataSinkEvent
+  location: class JpegImagesToMovie
+C:\Users\awgraham\Desktop\Github\picture-color-labs-awgraham\ColorLabs17\bookClasses\JpegImagesToMovie.java:506: error: cannot find symbol
+  static MediaLocator createMediaLocator(String url) {
+         ^
+  symbol:   class MediaLocator
+  location: class JpegImagesToMovie
+C:\Users\awgraham\Desktop\Github\picture-color-labs-awgraham\ColorLabs17\bookClasses\JpegImagesToMovie.java:537: error: cannot find symbol
+  class ImageDataSource extends PullBufferDataSource {
+                                ^
+  symbol:   class PullBufferDataSource
+  location: class JpegImagesToMovie
+C:\Users\awgraham\Desktop\Github\picture-color-labs-awgraham\ColorLabs17\bookClasses\JpegImagesToMovie.java:604: error: cannot find symbol
+  class ImageSourceStream implements PullBufferStream {
+                                     ^
+  symbol:   class PullBufferStream
+  location: class JpegImagesToMovie
+C:\Users\awgraham\Desktop\Github\picture-color-labs-awgraham\ColorLabs17\bookClasses\JpegImagesToMovie.java:548: error: cannot find symbol
+    public void setLocator(MediaLocator source) {
+                           ^
+  symbol:   class MediaLocator
+  location: class JpegImagesToMovie.ImageDataSource
+C:\Users\awgraham\Desktop\Github\picture-color-labs-awgraham\ColorLabs17\bookClasses\JpegImagesToMovie.java:551: error: cannot find symbol
+    public MediaLocator getLocator() {
+           ^
+  symbol:   class MediaLocator
+  location: class JpegImagesToMovie.ImageDataSource
+C:\Users\awgraham\Desktop\Github\picture-color-labs-awgraham\ColorLabs17\bookClasses\JpegImagesToMovie.java:578: error: cannot find symbol
+    public PullBufferStream[] getStreams() {
+           ^
+  symbol:   class PullBufferStream
+  location: class JpegImagesToMovie.ImageDataSource
+C:\Users\awgraham\Desktop\Github\picture-color-labs-awgraham\ColorLabs17\bookClasses\JpegImagesToMovie.java:587: error: cannot find symbol
+    public Time getDuration() {
+           ^
+  symbol:   class Time
+  location: class JpegImagesToMovie.ImageDataSource
+C:\Users\awgraham\Desktop\Github\picture-color-labs-awgraham\ColorLabs17\bookClasses\JpegImagesToMovie.java:608: error: cannot find symbol
+    VideoFormat format;
+    ^
+  symbol:   class VideoFormat
+  location: class JpegImagesToMovie.ImageSourceStream
+C:\Users\awgraham\Desktop\Github\picture-color-labs-awgraham\ColorLabs17\bookClasses\JpegImagesToMovie.java:639: error: cannot find symbol
+    public void read(Buffer buf) throws IOException {
+                     ^
+  symbol:   class Buffer
+  location: class JpegImagesToMovie.ImageSourceStream
+C:\Users\awgraham\Desktop\Github\picture-color-labs-awgraham\ColorLabs17\bookClasses\JpegImagesToMovie.java:693: error: cannot find symbol
+    public Format getFormat() {
+           ^
+  symbol:   class Format
+  location: class JpegImagesToMovie.ImageSourceStream
+C:\Users\awgraham\Desktop\Github\picture-color-labs-awgraham\ColorLabs17\bookClasses\JpegImagesToMovie.java:697: error: cannot find symbol
+    public ContentDescriptor getContentDescriptor() {
+           ^
+  symbol:   class ContentDescriptor
+  location: class JpegImagesToMovie.ImageSourceStream
+C:\Users\awgraham\Desktop\Github\picture-color-labs-awgraham\ColorLabs17\bookClasses\APicture2.java:24: error: invalid method declaration; return type required
+  public APicture2 ()
+         ^
+C:\Users\awgraham\Desktop\Github\picture-color-labs-awgraham\ColorLabs17\bookClasses\APicture2.java:36: error: invalid method declaration; return type required
+  public APicture2(String fileName)
+         ^
+C:\Users\awgraham\Desktop\Github\picture-color-labs-awgraham\ColorLabs17\bookClasses\APicture2.java:47: error: invalid method declaration; return type required
+  public APicture2(int width, int height)
+         ^
+C:\Users\awgraham\Desktop\Github\picture-color-labs-awgraham\ColorLabs17\bookClasses\APicture2.java:57: error: invalid method declaration; return type required
+  public APicture2(Picture copyPicture)
+         ^
+C:\Users\awgraham\Desktop\Github\picture-color-labs-awgraham\ColorLabs17\bookClasses\APicture2.java:67: error: invalid method declaration; return type required
+  public APicture2(BufferedImage image)
+         ^
+C:\Users\awgraham\Desktop\Github\picture-color-labs-awgraham\ColorLabs17\bookClasses\APicture2.java:17: error: class Picture is public, should be declared in a file named Picture.java
+public class Picture extends SimplePicture
+       ^
+Building index for all the packages and classes...
+Building index for all classes...
+Generating C:\Users\awgraham\Desktop\Github\final-project-2019-awgraham\Risk\doc\allclasses-frame.html...
+Generating C:\Users\awgraham\Desktop\Github\final-project-2019-awgraham\Risk\doc\allclasses-noframe.html...
+Generating C:\Users\awgraham\Desktop\Github\final-project-2019-awgraham\Risk\doc\index.html...
+Generating C:\Users\awgraham\Desktop\Github\final-project-2019-awgraham\Risk\doc\stylesheet.css...
+Note: Custom tags that could override future standard tags:  @pre, @post. To avoid potential overrides, use at least one period character (.) in custom tag names.
+Note: Custom tags that were not seen:  @pre, @post
+58 errors
+>>>>>>> 8d35cfb2bd96596ac6dda31227a4010f1a85144b
