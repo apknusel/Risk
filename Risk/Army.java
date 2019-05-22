@@ -25,6 +25,11 @@ public class Army
         return this.troops.size();
     }
     
+    public String getOwner()
+    {
+        return owner;
+    }
+    
     public void battleOfTroops(Player attacker, Player defender, Country attacking, Country defending)
     {
         Country[] attackingCountryNeighbours = attacking.getAdjacentCountries();

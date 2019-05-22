@@ -3,6 +3,7 @@ public class Player
     Army army;
     boolean winner;
     boolean turn;
+    Hand cards;
     public Player(Army playersArmy, String n)
     {
         army = playersArmy;
@@ -35,5 +36,28 @@ public class Player
     public boolean getTurn()
     {
         return turn;
+    }
+    public int numTroopsToReceive(Continent[] continents)
+    {
+        int troopsToReceive = 3;
+        for (int i = 0; i < continents.length; i++)
+        {
+            if (this.getArmy().getOwner().equals(continents[i].anOwner().getArmy().getOwner()))
+            {
+                troopsToReceive += continents[i].getBonusArmies();
+            }
+        }
+        
+        return troopsToReceive;
+    }
+
+    public void wherePutNewTroops(Country[] wherePutting, int troopsToReceive)
+    {
+        for (int i = 0; i < troopsToReceive; i++)
+        {
+            Country countryWanted = wherePutting[i];
+            Troop newTroop = new Troop("Artillery", countryWanted);
+            this.getArmy().addTroopToArmy(newTroop);
+        }
     }
 }
