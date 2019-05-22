@@ -9,13 +9,9 @@ import java.io.*;
 
 public class MainPanel extends JApplet implements ActionListener
 {
-   JLabel message;  // A label for giving some feedback to the user.
-                    // It appears at the top of the applet.
+   JLabel message;
    public void init()
    {
-          // Set up the applet with a message label and four buttons.
-          // Each button will open a different type of dialog.
-
       JPanel content = new JPanel();
       setContentPane(content);
     
@@ -48,7 +44,6 @@ public class MainPanel extends JApplet implements ActionListener
        
        content.setBorder(BorderFactory.createLineBorder(Color.GRAY,3));
        
-       
        // Map
        BufferedImage image1 = null;
 
@@ -60,7 +55,7 @@ public class MainPanel extends JApplet implements ActionListener
         JLabel label = new JLabel(new ImageIcon(image1));
         JPanel card2 = new JPanel();
         content.add(label);
-   } // end init()
+   }
    
  
    /**
@@ -75,13 +70,30 @@ public class MainPanel extends JApplet implements ActionListener
          message.setText("Displaying input dialog.");
          String response = JOptionPane.showInputDialog(null,"Enter your command.");
          if (response == null)
+         {
             message.setText("You canceled the input.");
+         }
          else if (response.trim().length() == 0)
+         {
             message.setText("You left the input box empty.");
+         }
+         else if (response.substring(0,11).equals("placetroops"))
+         {
+             int numberToAdd;
+             String countryToAdd;
+             for (int i = 0; response.length() < i;)
+             {
+                 if (response.charAt(i)" ")
+                 {
+                     numberToAdd = response.substring(i+1,i+2).parseInt();
+                 }
+             }
+         }
          else
-            message.setText("You entered \"" + response + "\".");
+         {
+            message.setText("You entered an invalid command.");
+         }
       }
-      
       String command1 = evt.getActionCommand();
       if (command1.equals("Player 2:"))
       {
@@ -94,5 +106,5 @@ public class MainPanel extends JApplet implements ActionListener
          else
             message.setText("You entered \"" + response + "\".");
       }
-   } // end actionPerformed()
-} // end class SimpleDialogDemo
+   }
+}
