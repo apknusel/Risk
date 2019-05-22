@@ -135,6 +135,11 @@ public class CountriesContinents
         WesternAustralia.setAdjacentCountries(WesternAustraliaNeighbours);
     }
     
+    public void setCountries()
+    {
+        countries.addAll(Arrays.asList(Alaska, Alberta, CentralAmerica, EasternUnitedStates, Greenland, NorthwestTerritory, Ontario, Quebec, WesternUnitedStates, Argentina, Brazil, Peru, Venezuela, GreatBritain, Iceland, NorthernEurope, Scandinavia, SouthernEurope, Ukraine, WesternEurope, Congo, EastAfrica, Egypt, Madagascar, NorthAfrica, SouthAfrica, Afghanistan, China, India, Irkutsk, Japan, Kamchatka, MiddleEast, Mongolia, Siam, Siberia, Ural, Yakutsk, EasternAustralia, Indonesia, NewGuinea, WesternAustralia));
+    }
+    
     
     Country[] NorthAmericaCountries = {Alaska, Alberta, CentralAmerica, EasternUnitedStates, Greenland, NorthwestTerritory, Ontario, Quebec, WesternUnitedStates};
     Country[] SouthAmericaCountries = {Argentina, Brazil, Peru, Venezuela};
@@ -143,7 +148,7 @@ public class CountriesContinents
     Country[] AsiaCountries = {Afghanistan, China, India, Irkutsk, Japan, Kamchatka, MiddleEast, Mongolia, Siam, Siberia, Ural, Yakutsk};
     Country[] AustraliaCountries = {EasternAustralia, Indonesia, NewGuinea, WesternAustralia};
 
-    ArrayList<Country> countries = new ArrayList<Country>(Alaska, Alberta, CentralAmerica, EasternUnitedStates, Greenland, NorthwestTerritory, Ontario, Quebec, WesternUnitedStates, Argentina, Brazil, Peru, Venezuela, GreatBritain, Iceland, NorthernEurope, Scandinavia, SouthernEurope, Ukraine, WesternEurope, Congo, EastAfrica, Egypt, Madagascar, NorthAfrica, SouthAfrica, Afghanistan, China, India, Irkutsk, Japan, Kamchatka, MiddleEast, Mongolia, Siam, Siberia, Ural, Yakutsk, EasternAustralia, Indonesia, NewGuinea, WesternAustralia);
+    ArrayList<Country> countries = new ArrayList<Country>(42);
     
     Continent NorthAmerica = new Continent("North America", 5, NorthAmericaCountries);
     Continent SouthAmerica = new Continent("South America", 2, SouthAmericaCountries);

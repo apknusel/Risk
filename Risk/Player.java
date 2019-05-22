@@ -10,42 +10,46 @@ public class Player
         winner = false;
         turn = false;
     }
+    
     public Army getArmy()
     {
         return army;
     }
+    
+    public void addCard()
+    {
+    }
+    
     public void updateWinner(Player p)
     {
         if (army.sizeOfArmy() == 0 && p.getArmy().sizeOfArmy() == 0)
-        {
-            winner = false;;
-        }
+            winner = false;
         else if (p.getArmy().sizeOfArmy() == 0)
-        {
             winner = true;
-        }
     }
+    
     public boolean isWinner()
     {
         return winner;
     }
+    
     public void switchTurn()
     {
         turn = !turn;
     }
+    
     public boolean getTurn()
     {
         return turn;
     }
+    
     public int numTroopsToReceive(Continent[] continents)
     {
         int troopsToReceive = 3;
         for (int i = 0; i < continents.length; i++)
         {
             if (this.getArmy().getOwner().equals(continents[i].anOwner().getArmy().getOwner()))
-            {
                 troopsToReceive += continents[i].getBonusArmies();
-            }
         }
         
         return troopsToReceive;

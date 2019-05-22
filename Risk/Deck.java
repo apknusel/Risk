@@ -18,10 +18,11 @@ public class Deck
 	public Deck (ArrayList<Country> countries)
 	{		
 		Collections.shuffle(countries);
-		cardTypes = new String[]{ "Infantry", "Cavalry", "Artillery" };
 		deck = new ArrayList<Card>();
 		for (i = 0; i < countries.size(); i++)
 		{
+		    int cardType;
+		    if (countries.get(i).getName() == 
 			deck.add(new Card(cardTypes[i / 14], countries.get(i)));
 			System.out.println("Added new card to deck: " + deck.get(i).getName());
 		}

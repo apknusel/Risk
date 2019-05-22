@@ -30,6 +30,18 @@ public class Army
         return owner;
     }
     
+    public void moveTroops(Country original, Country toGo, int amounts)
+    {
+        for (int i = 0; i < troops.size(); i++)
+        {
+            if (troops.get(i).getWhereLocated().getName() == original.getName() && amounts > 0)
+            {
+                troops.get(i).setWhereLocated(toGo);
+                amounts--;
+            }
+        }
+    }
+    
     public void battleOfTroops(Player attacker, Player defender, Country attacking, Country defending)
     {
         Country[] attackingCountryNeighbours = attacking.getAdjacentCountries();
