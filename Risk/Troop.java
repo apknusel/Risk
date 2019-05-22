@@ -14,6 +14,11 @@ public class Troop
         return whereLocated;
     }
     
+    public void setWhereLocated(Country whereGoing)
+    {
+        whereLocated = whereGoing;
+    }
+    
     public String getType()
     {
         return type;

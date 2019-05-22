@@ -12,12 +12,15 @@ public class Rules
     
     public static void main(String[] args)
     {
+        CountriesContinents cc = new CountriesContinents();
+        cc.setAdjacentCountries();
+        cc.setCountries();
+        Deck deck = new Deck(cc.countries);
         
-        
-        while (gameOver != false)
-        {
-           tempPlayer = currentTroop 
-        }
+        //while (gameOver != false)
+        //{
+        //   tempPlayer = currentTroop 
+        //}
     }
 
     //     Army army1 = new Army("Arthur");
