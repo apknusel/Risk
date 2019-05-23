@@ -49,6 +49,8 @@ public class Deck
             Card card2 = this.draw();
             Country country1 = card1.getCountry();
             Country country2 = card2.getCountry();
+            country1.setOccupant(player1);
+            country2.setOccupant(player2);
             if (card1.getStars() == 2)
             {
                 Troop troop1 = new Troop(country1);
