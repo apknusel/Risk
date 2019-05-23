@@ -4,6 +4,8 @@ import javax.swing.*;
 import java.awt.image.*;
 import javax.imageio.ImageIO;
 import java.io.*;
+import java.util.Scanner;
+import java.util.Arrays;
 
 // http://math.hws.edu/eck/cs124/javanotes6/source/SimpleDialogDemo.java
 
@@ -64,7 +66,16 @@ public class MainPanel extends JApplet implements ActionListener
     */
    public void actionPerformed(ActionEvent evt)
    {
+      // Creating players
       String command = evt.getActionCommand();
+      Army player1Army = new Army("player1");
+      Army player2Army = new Army("player2");
+      Player player1 = new Player(player1Army);
+      Player player2 = new Player(player2Army);
+      
+      //----------------------
+      
+      CountriesContinents cc = new CountriesContinents();
       if (command.equals("Player 1:"))
       {
          message.setText("Displaying input dialog.");
@@ -80,14 +91,29 @@ public class MainPanel extends JApplet implements ActionListener
          else if (response.substring(0,11).equals("placetroops"))
          {
              int numberToAdd;
-             String countryToAdd;
-             for (int i = 0; response.length() < i;)
+             Country countryToAdd;
+             String[] words = response.split(" ");
+             String[] words2;
+             for (int i = 1; i < words.length; i++)
              {
-                 if (response.charAt(i)" ")
+                 words2.push(words[i]);
+             }
+             String test = "";
+             for (int i = 0; i < words.length/2; i++)
+             {
+                 countryToAdd = cc.getCountry(words[i+1]);
+                 numberToAdd = Integer.parseInt(words[i]);
+                 for (int x = 0; x < numberToAdd; numberToAdd++)
                  {
-                     numberToAdd = response.substring(i+1,i+2).parseInt();
+                     Troop troop = new Troop(countryToAdd);
+                     player1.getArmy().addTroopToArmy(troop);
                  }
              }
+             for (int i = 0; i < words.length; i++)
+             {
+                 test += " "+words[i];
+             }
+             message.setText(test);
          }
          else
          {
