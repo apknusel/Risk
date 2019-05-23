@@ -1,20 +1,23 @@
 public final class Card
 {
-    private final String type;
+    private final int stars;
     private final Country country;
-    public Card(String type, Country country)
+    public Card(int bTroops, Country countryName)
     {
-		this.type = type;
-		this.country = country;
+		stars = bTroops;
+		country = countryName;
     }
+    
 	public String getName()
 	{
-		return country.getName() + ", " + type;
+		return country.getName();
 	}
-    public String getType()
+	
+    public int getStars()
     {
-		return type;
+		return stars;
     }
+    
     public Country getCountry()
     {
 		return country;

@@ -20,7 +20,7 @@ public class CountriesContinents
     Country NorthernEurope = new Country("Northern Europe", "Europe", 3);
     Country Scandinavia = new Country("Scandinavia", "Europe", 2);
     Country SouthernEurope = new Country("Southern Europe", "Europe", 3);
-    Country Ukraine = new Country("Ukraine", "Europe", 1);
+    Country Russia = new Country("Russia", "Europe", 1);
     Country WesternEurope = new Country("Western Europe", "Europe", 3);
     Country Congo = new Country("Congo", "Africa", 1);
     Country EastAfrica = new Country("East Africa", "Africa", 2);
@@ -60,10 +60,10 @@ public class CountriesContinents
     Country[] VenezuelaNeighbours = {CentralAmerica, Brazil, Argentina};
     Country[] GreatBritainNeighbours = {Iceland, Scandinavia, NorthernEurope, WesternEurope};
     Country[] IcelandNeighbours = {Greenland, GreatBritain};
-    Country[] NorthernEuropeNeighbours = {GreatBritain, Ukraine, SouthernEurope, WesternEurope};
-    Country[] ScandinaviaNeighbours = {GreatBritain, Ukraine};
-    Country[] SouthernEuropeNeighbours = {WesternEurope, NorthernEurope, Ukraine, Egypt, NorthAfrica};
-    Country[] UkraineNeighbours = {Scandinavia, Ural, Afghanistan, MiddleEast, SouthernEurope, NorthernEurope};
+    Country[] NorthernEuropeNeighbours = {GreatBritain, Russia, SouthernEurope, WesternEurope};
+    Country[] ScandinaviaNeighbours = {GreatBritain, Russia};
+    Country[] SouthernEuropeNeighbours = {WesternEurope, NorthernEurope, Russia, Egypt, NorthAfrica};
+    Country[] RussiaNeighbours = {Scandinavia, Ural, Afghanistan, MiddleEast, SouthernEurope, NorthernEurope};
     Country[] WesternEuropeNeighbours = {GreatBritain, NorthernEurope, SouthernEurope, NorthAfrica};
     Country[] CongoNeighbours = {NorthAfrica, Egypt, EastAfrica, SouthAfrica};
     Country[] EastAfricaNeighbours = {Egypt, Madagascar, SouthAfrica, Congo};
@@ -71,17 +71,17 @@ public class CountriesContinents
     Country[] MadagascarNeighbours = {EastAfrica, SouthAfrica};
     Country[] NorthAfricaNeighbours = {WesternEurope, SouthernEurope, Egypt, Congo, Brazil};
     Country[] SouthAfricaNeighbours = {Congo, EastAfrica, Madagascar};
-    Country[] AfghanistanNeighbours = {Ukraine, Ural, Siberia, China, India, MiddleEast};
+    Country[] AfghanistanNeighbours = {Russia, Ural, Siberia, China, India, MiddleEast};
     Country[] ChinaNeighbours = {Afghanistan, Siberia, Mongolia, Siam, India};
     Country[] IndiaNeighbours = {MiddleEast, Afghanistan, China, Siam};
     Country[] IrkutskNeighbours = {Siberia, Yakutsk, Kamchatka, Mongolia};
     Country[] JapanNeighbours = {Kamchatka, Mongolia};
     Country[] KamchatkaNeighbours = {Yakutsk, Alaska, Japan, Mongolia, Irkutsk};
-    Country[] MiddleEastNeighbours = {Ukraine, Afghanistan, India, Egypt};
+    Country[] MiddleEastNeighbours = {Russia, Afghanistan, India, Egypt};
     Country[] MongoliaNeighbours = {Siberia, Irkutsk, Kamchatka, Japan, China};
     Country[] SiamNeighbours = {India, China, Indonesia};
     Country[] SiberiaNeighbours = {Ural, Yakutsk, Irkutsk, Mongolia, China, Afghanistan};
-    Country[] UralNeighbours = {Ukraine, Siberia, Afghanistan};
+    Country[] UralNeighbours = {Russia, Siberia, Afghanistan};
     Country[] YakutskNeighbours = {Siberia, Kamchatka, Irkutsk};
     Country[] EasternAustraliaNeighbours = {NewGuinea, WesternAustralia};
     Country[] IndonesiaNeighbours = {EasternAustralia, NewGuinea};
@@ -109,7 +109,7 @@ public class CountriesContinents
         NorthernEurope.setAdjacentCountries(NorthernEuropeNeighbours);
         Scandinavia.setAdjacentCountries(ScandinaviaNeighbours);
         SouthernEurope.setAdjacentCountries(SouthernEuropeNeighbours);
-        Ukraine.setAdjacentCountries(UkraineNeighbours);
+        Russia.setAdjacentCountries(RussiaNeighbours);
         WesternEurope.setAdjacentCountries(WesternEuropeNeighbours);
         Congo.setAdjacentCountries(CongoNeighbours);
         EastAfrica.setAdjacentCountries(EastAfricaNeighbours);
@@ -137,13 +137,13 @@ public class CountriesContinents
     
     public void setCountries()
     {
-        countries.addAll(Arrays.asList(Alaska, Alberta, CentralAmerica, EasternUnitedStates, Greenland, NorthwestTerritory, Ontario, Quebec, WesternUnitedStates, Argentina, Brazil, Peru, Venezuela, GreatBritain, Iceland, NorthernEurope, Scandinavia, SouthernEurope, Ukraine, WesternEurope, Congo, EastAfrica, Egypt, Madagascar, NorthAfrica, SouthAfrica, Afghanistan, China, India, Irkutsk, Japan, Kamchatka, MiddleEast, Mongolia, Siam, Siberia, Ural, Yakutsk, EasternAustralia, Indonesia, NewGuinea, WesternAustralia));
+        countries.addAll(Arrays.asList(Alaska, Alberta, CentralAmerica, EasternUnitedStates, Greenland, NorthwestTerritory, Ontario, Quebec, WesternUnitedStates, Argentina, Brazil, Peru, Venezuela, GreatBritain, Iceland, NorthernEurope, Scandinavia, SouthernEurope, Russia, WesternEurope, Congo, EastAfrica, Egypt, Madagascar, NorthAfrica, SouthAfrica, Afghanistan, China, India, Irkutsk, Japan, Kamchatka, MiddleEast, Mongolia, Siam, Siberia, Ural, Yakutsk, EasternAustralia, Indonesia, NewGuinea, WesternAustralia));
     }
     
     
     Country[] NorthAmericaCountries = {Alaska, Alberta, CentralAmerica, EasternUnitedStates, Greenland, NorthwestTerritory, Ontario, Quebec, WesternUnitedStates};
     Country[] SouthAmericaCountries = {Argentina, Brazil, Peru, Venezuela};
-    Country[] EuropeCountries = {GreatBritain, Iceland, NorthernEurope, Scandinavia, SouthernEurope, Ukraine, WesternEurope};
+    Country[] EuropeCountries = {GreatBritain, Iceland, NorthernEurope, Scandinavia, SouthernEurope, Russia, WesternEurope};
     Country[] AfricaCountries = {Congo, EastAfrica, Egypt, Madagascar, NorthAfrica, SouthAfrica};
     Country[] AsiaCountries = {Afghanistan, China, India, Irkutsk, Japan, Kamchatka, MiddleEast, Mongolia, Siam, Siberia, Ural, Yakutsk};
     Country[] AustraliaCountries = {EasternAustralia, Indonesia, NewGuinea, WesternAustralia};
@@ -156,6 +156,8 @@ public class CountriesContinents
     Continent Africa = new Continent("Africa", 3, AfricaCountries);
     Continent Asia = new Continent("Asia", 7, AsiaCountries);
     Continent Australia = new Continent("Australia", 2, AustraliaCountries);
+    
+    Continent[] continents = {NorthAmerica, SouthAmerica, Europe, Africa, Asia, Australia};
     
     public Country getCountry(String country)
     {

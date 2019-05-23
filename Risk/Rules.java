@@ -15,7 +15,15 @@ public class Rules
         CountriesContinents cc = new CountriesContinents();
         cc.setAdjacentCountries();
         cc.setCountries();
+        Continent[] continents = cc.continents;
         Deck deck = new Deck(cc.countries);
+        Army arthursArmy = new Army("Arthur");
+        Army alexsArmy = new Army("Alex");
+        Player arthur = new Player(arthursArmy);
+        Player alex = new Player(alexsArmy);
+        deck.startOfGame(arthur, alex);
+        int num = arthur.numTroopsToReceive(continents);
+        System.out.println(num);
         
         //while (gameOver != false)
         //{

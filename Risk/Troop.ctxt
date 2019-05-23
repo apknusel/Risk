@@ -1,10 +1,8 @@
 #BlueJ class context
-comment0.params=typeOfTroop\ whereLocatedNow
-comment0.target=Troop(java.lang.String,\ Country)
+comment0.params=whereLocatedNow
+comment0.target=Troop(Country)
 comment1.params=
 comment1.target=Country\ getWhereLocated()
 comment2.params=whereGoing
 comment2.target=void\ setWhereLocated(Country)
-comment3.params=
-comment3.target=java.lang.String\ getType()
-numComments=4
+numComments=3

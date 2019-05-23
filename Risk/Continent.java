@@ -33,11 +33,19 @@ public class Continent
         for (int i = 0; i < this.countries.length; i++)
         {
             if (i == 0)
+            {
+                for (int j = 0; i < this.countries.length; i++)
+                {
+                    System.out.println(this.countries[j].getName());
+                }
                 occupantOfFirst = countries[i].getOccupant();
+                System.out.println(occupantOfFirst);
+            }
             else
             {
                 if (countries[i].getOccupant() != occupantOfFirst)
                 {
+                    System.out.println(countries[i].getOccupant());
                     anOwner = false;
                     return null;
                 }

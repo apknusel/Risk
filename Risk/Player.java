@@ -4,7 +4,7 @@ public class Player
     boolean winner;
     boolean turn;
     Hand cards;
-    public Player(Army playersArmy, String n)
+    public Player(Army playersArmy)
     {
         army = playersArmy;
         winner = false;
@@ -16,8 +16,14 @@ public class Player
         return army;
     }
     
-    public void addCard()
+    public void addCard(Card card)
     {
+        cards.add(card);
+    }
+    
+    public Hand getHand()
+    {
+        return cards;
     }
     
     public void updateWinner(Player p)
@@ -48,7 +54,7 @@ public class Player
         int troopsToReceive = 3;
         for (int i = 0; i < continents.length; i++)
         {
-            if (this.getArmy().getOwner().equals(continents[i].anOwner().getArmy().getOwner()))
+            if (continents[i].anOwner() != null && this.getArmy().getOwner().equals(continents[i].anOwner().getArmy().getOwner()))
                 troopsToReceive += continents[i].getBonusArmies();
         }
         
@@ -60,7 +66,7 @@ public class Player
         for (int i = 0; i < troopsToReceive; i++)
         {
             Country countryWanted = wherePutting[i];
-            Troop newTroop = new Troop("Artillery", countryWanted);
+            Troop newTroop = new Troop(countryWanted);
             this.getArmy().addTroopToArmy(newTroop);
         }
     }

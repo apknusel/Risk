@@ -1,11 +1,9 @@
 public class Troop
 {
-    String type;
     Country whereLocated;
     
-    public Troop(String typeOfTroop, Country whereLocatedNow)
+    public Troop(Country whereLocatedNow)
     {
-        type = typeOfTroop;
         whereLocated = whereLocatedNow;
     }
 
@@ -17,10 +15,5 @@ public class Troop
     public void setWhereLocated(Country whereGoing)
     {
         whereLocated = whereGoing;
-    }
-    
-    public String getType()
-    {
-        return type;
     }
 }
