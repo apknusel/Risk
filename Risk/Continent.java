@@ -34,18 +34,14 @@ public class Continent
         {
             if (i == 0)
             {
-                for (int j = 0; i < this.countries.length; i++)
-                {
-                    System.out.println(this.countries[j].getName());
-                }
                 occupantOfFirst = countries[i].getOccupant();
-                System.out.println(occupantOfFirst);
+                System.out.println(occupantOfFirst.getArmy().getOwner());
             }
             else
             {
                 if (countries[i].getOccupant() != occupantOfFirst)
                 {
-                    System.out.println(countries[i].getOccupant());
+                    System.out.println(countries[i].getOccupant().getArmy().getOwner());
                     anOwner = false;
                     return null;
                 }
