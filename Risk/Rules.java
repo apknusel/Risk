@@ -22,8 +22,19 @@ public class Rules
         Player arthur = new Player(arthursArmy);
         Player alex = new Player(alexsArmy);
         deck.startOfGame(arthur, alex);
-        int num = arthur.numTroopsToReceive(continents);
-        System.out.println(num);
+        System.out.println(cc.getCountry("Northern Europe").getOccupant().getArmy().getOwner());
+        arthursArmy.battleOfTroops(arthur, alex, cc.getCountry("Northern Europe"), cc.getCountry("Scandinavia"));
+//         for (int i = 0; i < arthursArmy.troops.size(); i++)
+//         {
+//             System.out.println(arthursArmy.troops.get(i).getWhereLocated().getName());
+//         }
+//         //arthursArmy.moveTroops(cc.getCountry("Egypt"), cc.getCountry("Peru"), 1);
+//         Country[] countries = {cc.getCountry("Alaska"), cc.getCountry("Alaska"), cc.getCountry("Alaska")};
+//         arthur.wherePutNewTroops(countries, 3);
+//         for (int i = 0; i < arthursArmy.troops.size(); i++)
+//         {
+//             System.out.println(arthursArmy.troops.get(i).getWhereLocated().getName());
+//         }
         
         //while (gameOver != false)
         //{

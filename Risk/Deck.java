@@ -78,6 +78,7 @@ public class Deck
             }
         }
         this.shuffle();
+        this.discardToDeck();
     }
     
     public Card draw()
@@ -106,5 +107,10 @@ public class Deck
     public void shuffle()
     {
         Collections.shuffle(deck);
+    }
+    
+    public ArrayList<Card> getDeck()
+    {
+        return deck;
     }
 }

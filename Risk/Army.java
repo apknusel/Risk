@@ -68,6 +68,11 @@ public class Army
                 attackers.add(currentTroop);
         }
         
+        for (int i = 0; i < attackers.size(); i++)
+        {
+            System.out.println(attackers.get(i).getWhereLocated().getName());
+        }
+        
         if (isNeighbour == true && attackers.size() != 0)
         {
             for (int i = 0; i < defendingArmy.troops.size(); i++)
@@ -118,6 +123,7 @@ public class Army
                 {
                     if (defendingArmy.troops.get(i).getWhereLocated().getName() == defending.getName())
                     {
+                        defenders.remove(i);
                         defendingArmy.troops.remove(i);
                         found = true;
                     }
@@ -131,6 +137,7 @@ public class Army
                 {
                     if (attackingArmy.troops.get(i).getWhereLocated().getName() == attacking.getName())
                     {
+                        attackers.remove(i);
                         attackingArmy.troops.remove(i);
                         found = true;
                     }
@@ -146,6 +153,7 @@ public class Army
                     {
                         if (defendingArmy.troops.get(i).getWhereLocated().getName() == defending.getName())
                         {
+                            defenders.remove(i);
                             defendingArmy.troops.remove(i);
                             found = true;
                         }
@@ -159,6 +167,7 @@ public class Army
                     {
                         if (attackingArmy.troops.get(i).getWhereLocated().getName() == attacking.getName())
                         {
+                            attackers.remove(i);
                             attackingArmy.troops.remove(i);
                             found = true;
                         }
