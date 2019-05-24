@@ -22,8 +22,11 @@ public class Rules
         Player arthur = new Player(arthursArmy);
         Player alex = new Player(alexsArmy);
         deck.startOfGame(arthur, alex);
-        System.out.println(cc.getCountry("Northern Europe").getOccupant().getArmy().getOwner());
-        arthursArmy.battleOfTroops(arthur, alex, cc.getCountry("Northern Europe"), cc.getCountry("Scandinavia"));
+         for (int i = 0; i < alexsArmy.troops.size(); i++)
+         {
+             System.out.println(alexsArmy.troops.get(i).getWhereLocated().getName());
+         }
+        arthursArmy.battleOfTroops(arthur, alex, cc.getCountry("Russia"), cc.getCountry("Scandinavia"));
 //         for (int i = 0; i < arthursArmy.troops.size(); i++)
 //         {
 //             System.out.println(arthursArmy.troops.get(i).getWhereLocated().getName());

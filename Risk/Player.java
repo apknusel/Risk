@@ -74,9 +74,7 @@ public class Player
             }
             
             if (!alreadyThere)
-            {
                 controlled.add(this.getArmy().troops.get(i).getWhereLocated());
-            }
         }
         
         int size = controlled.size();
