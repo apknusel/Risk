@@ -67,18 +67,14 @@ public class Army
             if (currentTroop.getWhereLocated().getName().equals(attacking.getName()))
                 attackers.add(currentTroop);
         }
-        
-        for (int i = 0; i < attackers.size(); i++)
-        {
-            System.out.println(attackers.get(i).getWhereLocated().getName());
-        }
+        attackers.remove(0);
         
         if (isNeighbour == true && attackers.size() != 0)
         {
             for (int i = 0; i < defendingArmy.troops.size(); i++)
             {
                 Troop currentTroop = defendingArmy.troops.get(i);
-                if (currentTroop.getWhereLocated().getName() == defending.getName())
+                if (currentTroop.getWhereLocated().getName().equals(defending.getName()))
                     defenders.add(currentTroop);
             }
             
@@ -90,11 +86,14 @@ public class Army
             if (attackers.size() >= 4)
                 attackerDice = 3;
             else
-                attackerDice = attackers.size() - 1;
+                attackerDice = attackers.size();
                 
             Dice dice = new Dice();
             ArrayList<Integer> defenderNumbers = dice.roll(defenderDice);
             ArrayList<Integer> attackerNumbers = dice.roll(attackerDice);
+            
+            //System.out.println(defenderNumbers.get(0));
+            //System.out.println(attackerNumbers.get(0));
             
             if (defenderDice > attackerDice)
                 defenderNumbers.remove(0);
@@ -106,15 +105,15 @@ public class Army
             else if (attackerDice - defenderDice == 1)
                 attackerNumbers.remove(0);
                 
-            for (int i = 0; i < defenderNumbers.size(); i++)
-            {
-                System.out.println(defenderNumbers.get(i));
-            }
-            System.out.println(":");
-            for (int i = 0; i < attackerNumbers.size(); i++)
-            {
-                System.out.println(attackerNumbers.get(i));
-            }
+            //for (int i = 0; i < defenderNumbers.size(); i++)
+            //{
+            //    System.out.println(defenderNumbers.get(i));
+            //}
+            //System.out.println(":");
+            //for (int i = 0; i < attackerNumbers.size(); i++)
+            //{
+            //    System.out.println(attackerNumbers.get(i));
+            // }
             
             if (attackerNumbers.get(0) > defenderNumbers.get(0))
             {
@@ -123,9 +122,10 @@ public class Army
                 {
                     if (defendingArmy.troops.get(i).getWhereLocated().getName() == defending.getName())
                     {
-                        defenders.remove(i);
+                        defenders.remove(0);
                         defendingArmy.troops.remove(i);
                         found = true;
+                        defending.removeTroops(1);
                     }
                 }
             }
@@ -137,9 +137,10 @@ public class Army
                 {
                     if (attackingArmy.troops.get(i).getWhereLocated().getName() == attacking.getName())
                     {
-                        attackers.remove(i);
+                        attackers.remove(0);
                         attackingArmy.troops.remove(i);
                         found = true;
+                        attacking.removeTroops(1);
                     }
                 }
             }
@@ -153,9 +154,10 @@ public class Army
                     {
                         if (defendingArmy.troops.get(i).getWhereLocated().getName() == defending.getName())
                         {
-                            defenders.remove(i);
+                            defenders.remove(0);
                             defendingArmy.troops.remove(i);
                             found = true;
+                            defending.removeTroops(1);
                         }
                     }
                 }
@@ -167,9 +169,10 @@ public class Army
                     {
                         if (attackingArmy.troops.get(i).getWhereLocated().getName() == attacking.getName())
                         {
-                            attackers.remove(i);
+                            attackers.remove(0);
                             attackingArmy.troops.remove(i);
                             found = true;
+                            defending.removeTroops(1);
                         }
                     }
                 }
