@@ -5,7 +5,7 @@ import java.awt.image.*;
 import javax.imageio.ImageIO;
 import java.io.*;
 import java.util.Scanner;
-import java.util.Arrays;
+import java.util.ArrayList;
 
 // http://math.hws.edu/eck/cs124/javanotes6/source/SimpleDialogDemo.java
 
@@ -16,8 +16,8 @@ public class MainPanel extends JApplet implements ActionListener
    {
       JPanel content = new JPanel();
       setContentPane(content);
-    
-      
+
+
        content.setBackground(Color.GRAY);
        content.setBackground(Color.GRAY);
        content.setLayout( new FlowLayout() );
@@ -33,19 +33,19 @@ public class MainPanel extends JApplet implements ActionListener
        buttonBar.setLayout(new GridLayout(1,3));
        buttonBar.setBackground(Color.GRAY);
        content.add(buttonBar);
-       
+
        button = new JButton("Player 1:");
        button.setPreferredSize(new Dimension(100, 20));
        button.addActionListener(this);
        buttonBar.add(button);
-       
+
        button = new JButton("Player 2:");
        button.setPreferredSize(new Dimension(100, 20));
        button.addActionListener(this);
        buttonBar.add(button);
-       
+
        content.setBorder(BorderFactory.createLineBorder(Color.GRAY,3));
-       
+
        // Map
        BufferedImage image1 = null;
 
@@ -53,15 +53,15 @@ public class MainPanel extends JApplet implements ActionListener
             image1 = ImageIO.read(new File("map3.jpg"));
         }
         catch(Exception e){}
-        
+
         JLabel label = new JLabel(new ImageIcon(image1));
         JPanel card2 = new JPanel();
         content.add(label);
    }
-   
- 
+
+
    /**
-    * Respond to a button click by showing a dialog and setting the 
+    * Respond to a button click by showing a dialog and setting the
     * message label to describe the user's response.
     */
    public void actionPerformed(ActionEvent evt)
@@ -72,10 +72,15 @@ public class MainPanel extends JApplet implements ActionListener
       Army player2Army = new Army("player2");
       Player player1 = new Player(player1Army);
       Player player2 = new Player(player2Army);
-      
+
       //----------------------
-      
+
       CountriesContinents cc = new CountriesContinents();
+      cc.setAdjacentCountries();
+      cc.setCountries();
+      Continent[] continents = cc.continents;
+      Deck deck = new Deck(cc.countries);
+      deck.startOfGame(player1, player2);
       if (command.equals("Player 1:"))
       {
          message.setText("Displaying input dialog.");
@@ -92,26 +97,27 @@ public class MainPanel extends JApplet implements ActionListener
          {
              int numberToAdd;
              Country countryToAdd;
-             String[] words = response.split(" ");
-             String[] words2;
-             for (int i = 1; i < words.length; i++)
-             {
-                 words2.push(words[i]);
-             }
              String test = "";
-             for (int i = 0; i < words.length/2; i++)
+             ArrayList<String> words = new ArrayList<String>();
+             String[] response1 = response.split(" ");
+             message.setText(test);
+             for (int i = 1; i < response1.length; i++)
              {
-                 countryToAdd = cc.getCountry(words[i+1]);
-                 numberToAdd = Integer.parseInt(words[i]);
-                 for (int x = 0; x < numberToAdd; numberToAdd++)
+                 words.add(response1[i]);
+                }
+             for (int i = 0; i < words.size(); i+=2)
+             {
+                 countryToAdd = cc.getCountry(words.get(i+1));
+                 numberToAdd = Integer.parseInt(words.get(i));
+                 for (int x = 0; x < numberToAdd; x++)
                  {
                      Troop troop = new Troop(countryToAdd);
                      player1.getArmy().addTroopToArmy(troop);
                  }
              }
-             for (int i = 0; i < words.length; i++)
+             for (int i = 0; i < words.size(); i++)
              {
-                 test += " "+words[i];
+                 test += " "+words.get(i);
              }
              message.setText(test);
          }
