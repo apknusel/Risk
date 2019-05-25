@@ -8,6 +8,7 @@ public class Dice
     public Dice()
     {
     }
+    
     public ArrayList<Integer> roll(int numberOfDice) 
     {
 		diceArray = new ArrayList<Integer>(numberOfDice);

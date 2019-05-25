@@ -172,11 +172,22 @@ public class Army
                             attackers.remove(0);
                             attackingArmy.troops.remove(i);
                             found = true;
-                            defending.removeTroops(1);
+                            attacking.removeTroops(1);
                         }
                     }
                 }
             }
+        }
+        
+        if (defenders.size() == 0)
+        {
+            defending.setOccupant(attacker);
+            for (int i = 0; i < attackers.size(); i++)
+            {
+                attackers.get(i).setWhereLocated(defending);
+                defending.addTroops(1);
+            }
+            attacker.bonusCard();
         }
     }
 }

@@ -14,13 +14,13 @@ public class Hand
         hand.add(card);
     }
     
-    public void awardTroops(Player player, Card[] cards)
+    public int awardTroops(ArrayList<Card> cards)
     {
         int totalStars = 0;
         int troopsToGive = 0;
-        for (int i = 0; i < cards.length; i++)
+        for (int i = 0; i < cards.size(); i++)
         {
-            totalStars += cards[i].getStars();
+            totalStars += cards.get(i).getStars();
         }
         
         if (totalStars  == 1)
@@ -46,9 +46,7 @@ public class Hand
         else
             troopsToGive = 30 + ((totalStars - 10) * 5);
         
-        Country[] countries = new Country[troopsToGive];    
-            
-        player.wherePutNewTroops(countries, troopsToGive);
+        return troopsToGive;
     }
 
 //  public void removeCardsFromHand(int in1, int in2, int in3)
