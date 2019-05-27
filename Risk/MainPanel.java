@@ -16,8 +16,7 @@ public class MainPanel extends JApplet implements ActionListener
    {
       JPanel content = new JPanel();
       setContentPane(content);
-
-
+      
        content.setBackground(Color.GRAY);
        content.setBackground(Color.GRAY);
        content.setLayout( new FlowLayout() );
@@ -26,7 +25,8 @@ public class MainPanel extends JApplet implements ActionListener
        message.setBackground(Color.WHITE);
        message.setOpaque(true);
        getContentPane().add(message);
-
+      
+       
        JPanel buttonBar;
        JButton button;
        buttonBar = new JPanel();
@@ -34,23 +34,18 @@ public class MainPanel extends JApplet implements ActionListener
        buttonBar.setBackground(Color.GRAY);
        content.add(buttonBar);
 
-       button = new JButton("Player 1:");
-       button.setPreferredSize(new Dimension(100, 20));
-       button.addActionListener(this);
-       buttonBar.add(button);
-
-       button = new JButton("Player 2:");
+       button = new JButton("Game");
        button.setPreferredSize(new Dimension(100, 20));
        button.addActionListener(this);
        buttonBar.add(button);
 
        content.setBorder(BorderFactory.createLineBorder(Color.GRAY,3));
-
+       
        // Map
        BufferedImage image1 = null;
 
         try {
-            image1 = ImageIO.read(new File("map3.jpg"));
+            image1 = ImageIO.read(new File("map 10.jpg"));
         }
         catch(Exception e){}
 
@@ -240,7 +235,8 @@ public class MainPanel extends JApplet implements ActionListener
           //Resets getting a card for capturing a country
           currentPlayer.resetBonusCard();
       }
-        
+
+      
       //Prints who the winner is
       if (currentPlayer.isWinner())
           System.out.println("The winner is " + currentPlayer.getArmy().getOwner());
