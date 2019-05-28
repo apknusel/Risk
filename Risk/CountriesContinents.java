@@ -164,7 +164,7 @@ public class CountriesContinents
         Country countryFound = null;
         for (int i = 0; i < NorthAmericaCountries.length; i++)
         {
-            if (NorthAmericaCountries[i].getNameWithoutSpaces() == country)
+            if (NorthAmericaCountries[i].getNameWithoutSpaces().equals(country))
             {
                 countryFound = NorthAmericaCountries[i];
                 return countryFound;
@@ -173,7 +173,7 @@ public class CountriesContinents
         
         for (int i = 0; i < SouthAmericaCountries.length; i++)
         {
-            if (SouthAmericaCountries[i].getNameWithoutSpaces() == country)
+            if (SouthAmericaCountries[i].getNameWithoutSpaces().equals(country))
             {
                 countryFound = SouthAmericaCountries[i];
                 return countryFound;
@@ -182,7 +182,7 @@ public class CountriesContinents
         
         for (int i = 0; i < EuropeCountries.length; i++)
         {
-            if (EuropeCountries[i].getNameWithoutSpaces() == country)
+            if (EuropeCountries[i].getNameWithoutSpaces().equals(country))
             {
                 countryFound = EuropeCountries[i];
                 return countryFound;
@@ -191,7 +191,7 @@ public class CountriesContinents
         
         for (int i = 0; i < AfricaCountries.length; i++)
         {
-            if (AfricaCountries[i].getNameWithoutSpaces() == country)
+            if (AfricaCountries[i].getNameWithoutSpaces().equals(country))
             {
                 countryFound = AfricaCountries[i];
                 return countryFound;
@@ -200,7 +200,7 @@ public class CountriesContinents
         
         for (int i = 0; i < AsiaCountries.length; i++)
         {
-            if (AsiaCountries[i].getNameWithoutSpaces() == country)
+            if (AsiaCountries[i].getNameWithoutSpaces().equals(country))
             {
                 countryFound = AsiaCountries[i];
                 return countryFound;
@@ -209,7 +209,7 @@ public class CountriesContinents
         
         for (int i = 0; i < AustraliaCountries.length; i++)
         {
-            if (AustraliaCountries[i].getNameWithoutSpaces() == country)
+            if (AustraliaCountries[i].getNameWithoutSpaces().equals(country))
             {
                 countryFound = AustraliaCountries[i];
                 return countryFound;
