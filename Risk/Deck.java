@@ -83,6 +83,9 @@ public class Deck
     
     public Card draw()
     {
+        if (deck.size() == 0)
+            this.discardToDeck();
+            
         Card drawCard = this.deck.get(0);
         discardPile.add(drawCard);
         deck.remove(0);

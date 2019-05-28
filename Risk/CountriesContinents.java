@@ -2,48 +2,48 @@ import java.util.*;
 
 public class CountriesContinents
 {
-    Country Alaska = new Country("Alaska", "North America", 1);
-    Country Alberta = new Country("Alberta", "North America", 1);
-    Country CentralAmerica = new Country("Central America", "North America", 1);
-    Country EasternUnitedStates = new Country("Eastern United States", "North America", 3);
-    Country Greenland = new Country("Greenland", "North America", 1);
-    Country NorthwestTerritory = new Country("Northwest Territory", "North America", 1);
-    Country Ontario = new Country("Ontario", "North America", 2);
-    Country Quebec = new Country("Quebec", "North America", 2);
-    Country WesternUnitedStates = new Country("Western United States", "North America", 3);
-    Country Argentina = new Country("Argentina", "South America", 1);
-    Country Brazil = new Country("Brazil", "South America", 2);
-    Country Peru = new Country("Peru", "South America", 1);
-    Country Venezuela = new Country("Venezuela", "South America", 1);
-    Country GreatBritain = new Country("Great Britain", "Europe", 2);
-    Country Iceland = new Country("Iceland", "Europe", 1);
-    Country NorthernEurope = new Country("Northern Europe", "Europe", 3);
-    Country Scandinavia = new Country("Scandinavia", "Europe", 2);
-    Country SouthernEurope = new Country("Southern Europe", "Europe", 3);
-    Country Russia = new Country("Russia", "Europe", 1);
-    Country WesternEurope = new Country("Western Europe", "Europe", 3);
-    Country Congo = new Country("Congo", "Africa", 1);
-    Country EastAfrica = new Country("East Africa", "Africa", 2);
-    Country Egypt = new Country("Egypt", "Africa", 1);
-    Country Madagascar = new Country("Madagascar", "Africa", 1);
-    Country NorthAfrica = new Country("North Africa", "Africa", 2);
-    Country SouthAfrica = new Country("South Africa", "Africa", 2);
-    Country Afghanistan = new Country("Afghanistan", "Asia", 1);
-    Country China = new Country("China", "Asia", 3);
-    Country India = new Country("India", "Asia", 3);
-    Country Irkutsk = new Country("Irkutsk", "Asia", 1);
-    Country Japan = new Country("Japan", "Asia", 2);
-    Country Kamchatka = new Country("Kamchatka", "Asia", 1);
-    Country MiddleEast = new Country("Middle East", "Asia", 3);
-    Country Mongolia = new Country("Mongolia", "Asia", 1);
-    Country Siam = new Country("Siam", "Asia", 2);
-    Country Siberia = new Country("Siberia", "Asia", 1);
-    Country Ural = new Country("Ural", "Asia", 1);
-    Country Yakutsk = new Country("Yakutsk", "Asia", 1);
-    Country EasternAustralia = new Country("Eastern Australia", "Australia", 3);
-    Country Indonesia = new Country("Indonesia", "Australia", 2);
-    Country NewGuinea = new Country("New Guinea", "Australia", 1);
-    Country WesternAustralia = new Country("Western Australia", "Australia", 2);
+    Country Alaska = new Country("Alaska", "Alaska", "North America", 1);
+    Country Alberta = new Country("Alberta", "Alberta", "North America", 1);
+    Country CentralAmerica = new Country("Central America", "CentralAmerica", "North America", 1);
+    Country EasternUnitedStates = new Country("Eastern United States", "EasternUnitedStates", "North America", 3);
+    Country Greenland = new Country("Greenland", "Greenland", "North America", 1);
+    Country NorthwestTerritory = new Country("Northwest Territory", "NorthwestTerritory", "North America", 1);
+    Country Ontario = new Country("Ontario", "Ontario", "North America", 2);
+    Country Quebec = new Country("Quebec", "Quebec", "North America", 2);
+    Country WesternUnitedStates = new Country("Western United States", "WesternUnitedStates", "North America", 3);
+    Country Argentina = new Country("Argentina", "Argentina", "South America", 1);
+    Country Brazil = new Country("Brazil", "Brazil", "South America", 2);
+    Country Peru = new Country("Peru", "Peru", "South America", 1);
+    Country Venezuela = new Country("Venezuela", "Venezuela", "South America", 1);
+    Country GreatBritain = new Country("Great Britain", "GreatBritain", "Europe", 2);
+    Country Iceland = new Country("Iceland", "Iceland", "Europe", 1);
+    Country NorthernEurope = new Country("Northern Europe", "NorthernEurope", "Europe", 3);
+    Country Scandinavia = new Country("Scandinavia", "Scandinavia", "Europe", 2);
+    Country SouthernEurope = new Country("Southern Europe", "SouthernEurope", "Europe", 3);
+    Country Russia = new Country("Russia", "Russia", "Europe", 1);
+    Country WesternEurope = new Country("Western Europe", "WesternEurope", "Europe", 3);
+    Country Congo = new Country("Congo", "Congo", "Africa", 1);
+    Country EastAfrica = new Country("East Africa", "EastAfrica", "Africa", 2);
+    Country Egypt = new Country("Egypt", "Egypt", "Africa", 1);
+    Country Madagascar = new Country("Madagascar", "Madagascar", "Africa", 1);
+    Country NorthAfrica = new Country("North Africa", "NorthAfrica", "Africa", 2);
+    Country SouthAfrica = new Country("South Africa", "SouthAfrica", "Africa", 2);
+    Country Afghanistan = new Country("Afghanistan", "Afghanistan", "Asia", 1);
+    Country China = new Country("China", "China", "Asia", 3);
+    Country India = new Country("India", "India", "Asia", 3);
+    Country Irkutsk = new Country("Irkutsk", "Irkutsk", "Asia", 1);
+    Country Japan = new Country("Japan", "Japan", "Asia", 2);
+    Country Kamchatka = new Country("Kamchatka", "Kamchatka", "Asia", 1);
+    Country MiddleEast = new Country("Middle East", "MiddleEast", "Asia", 3);
+    Country Mongolia = new Country("Mongolia", "Mongolia", "Asia", 1);
+    Country Siam = new Country("Siam", "Siam", "Asia", 2);
+    Country Siberia = new Country("Siberia", "Siberia", "Asia", 1);
+    Country Ural = new Country("Ural", "Ural", "Asia", 1);
+    Country Yakutsk = new Country("Yakutsk", "Yakutsk", "Asia", 1);
+    Country EasternAustralia = new Country("Eastern Australia", "EasternAustralia", "Australia", 3);
+    Country Indonesia = new Country("Indonesia", "Indonesia", "Australia", 2);
+    Country NewGuinea = new Country("New Guinea", "NewGuinea", "Australia", 1);
+    Country WesternAustralia = new Country("Western Australia", "WesternAustralia", "Australia", 2);
 
     Country[] AlaskaNeighbours = {Alberta, NorthwestTerritory, Kamchatka};
     Country[] AlbertaNeighbours = {Alaska, NorthwestTerritory, Ontario, WesternUnitedStates};
@@ -164,7 +164,7 @@ public class CountriesContinents
         Country countryFound = null;
         for (int i = 0; i < NorthAmericaCountries.length; i++)
         {
-            if (NorthAmericaCountries[i].getName() == country)
+            if (NorthAmericaCountries[i].getNameWithoutSpaces() == country)
             {
                 countryFound = NorthAmericaCountries[i];
                 return countryFound;
@@ -173,7 +173,7 @@ public class CountriesContinents
         
         for (int i = 0; i < SouthAmericaCountries.length; i++)
         {
-            if (SouthAmericaCountries[i].getName() == country)
+            if (SouthAmericaCountries[i].getNameWithoutSpaces() == country)
             {
                 countryFound = SouthAmericaCountries[i];
                 return countryFound;
@@ -182,7 +182,7 @@ public class CountriesContinents
         
         for (int i = 0; i < EuropeCountries.length; i++)
         {
-            if (EuropeCountries[i].getName() == country)
+            if (EuropeCountries[i].getNameWithoutSpaces() == country)
             {
                 countryFound = EuropeCountries[i];
                 return countryFound;
@@ -191,7 +191,7 @@ public class CountriesContinents
         
         for (int i = 0; i < AfricaCountries.length; i++)
         {
-            if (AfricaCountries[i].getName() == country)
+            if (AfricaCountries[i].getNameWithoutSpaces() == country)
             {
                 countryFound = AfricaCountries[i];
                 return countryFound;
@@ -200,7 +200,7 @@ public class CountriesContinents
         
         for (int i = 0; i < AsiaCountries.length; i++)
         {
-            if (AsiaCountries[i].getName() == country)
+            if (AsiaCountries[i].getNameWithoutSpaces() == country)
             {
                 countryFound = AsiaCountries[i];
                 return countryFound;
@@ -209,7 +209,7 @@ public class CountriesContinents
         
         for (int i = 0; i < AustraliaCountries.length; i++)
         {
-            if (AustraliaCountries[i].getName() == country)
+            if (AustraliaCountries[i].getNameWithoutSpaces() == country)
             {
                 countryFound = AustraliaCountries[i];
                 return countryFound;

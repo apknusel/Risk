@@ -14,13 +14,27 @@ public class Hand
         hand.add(card);
     }
     
-    public void awardTroops(Player player, Card[] cards)
+    public String forDisplay()
+    {
+        String string = "";
+        
+        for (int i = 0; i < hand.size(); i++)
+        {
+            Card card = hand.get(i);
+            string += card.getName() + " ";
+            string += card.getStars() + "\n";
+        }
+        
+        return string;
+    }
+    
+    public int awardTroops(ArrayList<Card> cards)
     {
         int totalStars = 0;
         int troopsToGive = 0;
-        for (int i = 0; i < cards.length; i++)
+        for (int i = 0; i < cards.size(); i++)
         {
-            totalStars += cards[i].getStars();
+            totalStars += cards.get(i).getStars();
         }
         
         if (totalStars  == 1)
@@ -46,41 +60,9 @@ public class Hand
         else
             troopsToGive = 30 + ((totalStars - 10) * 5);
         
-        Country[] countries = new Country[troopsToGive];    
-            
-        player.wherePutNewTroops(countries, troopsToGive);
+        return troopsToGive;
     }
 
-//  public void removeCardsFromHand(int in1, int in2, int in3)
-//  {
-//      if (canTurnInCards(in1, in2, in3) == true)
-//      {
-//          hand.remove(in3);
-//          hand.remove(in2);
-//          hand.remove(in1);
-//      }
-//      else
-//          System.out.println("You must trade in three cards of the same type or one of each type.");
-//  }
-//  public boolean canTurnInCards(int in1, int in2, int in3)
-//  {
-//      condition = false;
-//      if (hand.size() >= 3)
-//          if (hand.get(in1).getType().equals(hand.get(in2).getType()) && hand.get(in1).getType().equals(hand.get(in3).getType()))
-//              condition = true;
-//          else if (!hand.get(in1).getType().equals(hand.get(in2).getType()) && !hand.get(in1).getType().equals(hand.get(in3).getType()) && !hand.get(in2).getType().equals(hand.get(in3).getType()))
-//              condition = true;
-// 
-//      return condition;
-//  }
-//  public boolean mustTurnInCards()
-//  {
-//      condition = false;
-//      if (hand.size() >= 5)
-//          condition = true;
-//          
-//      return condition;
-//  }
     public ArrayList<Card> getCards()
     {
         return hand;
