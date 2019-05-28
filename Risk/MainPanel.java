@@ -20,16 +20,16 @@ public class MainPanel extends JApplet implements ActionListener
    CountriesContinents cc;
    Continent[] continents;
    Deck deck;
-   String name1, name2; 
+   String name1, name2;
    Army player1Army, player2Army;
    Player player1, player2;
-   
-   
+
+
    public void init()
    {
        JPanel content = new JPanel();
        setContentPane(content);
-      
+
        content.setBackground(Color.GRAY);
        content.setBackground(Color.GRAY);
        content.setLayout( new FlowLayout() );
@@ -38,8 +38,8 @@ public class MainPanel extends JApplet implements ActionListener
        message.setBackground(Color.WHITE);
        message.setOpaque(true);
        getContentPane().add(message);
-      
-       
+
+
        JPanel buttonBar;
        JButton button;
        buttonBar = new JPanel();
@@ -48,16 +48,16 @@ public class MainPanel extends JApplet implements ActionListener
        content.add(buttonBar);
 
        button = new JButton("Press for next move");
-       button.setPreferredSize(new Dimension(100, 20));
+       button.setPreferredSize(new Dimension(200, 20));
        button.addActionListener(this);
        buttonBar.add(button);
 
        content.setBorder(BorderFactory.createLineBorder(Color.GRAY,3));
-       
+
        //Map
        BufferedImage image1 = null;
 
-       try 
+       try
        {
            image1 = ImageIO.read(new File("map 10.jpg"));
        }
@@ -66,31 +66,31 @@ public class MainPanel extends JApplet implements ActionListener
        JLabel label = new JLabel(new ImageIcon(image1));
        JPanel card2 = new JPanel();
        content.add(label);
-        
+
        //Makes all of the countries and continents and then sets the adjacent ones and then puts all of them into an arrayList
        cc = new CountriesContinents();
        cc.setAdjacentCountries();
        cc.setCountries();
-          
+
        //Makes the continents from the countries
        continents = cc.continents;
-          
+
        //Makes the deck from the countries arrayList
        deck = new Deck(cc.countries);
-          
+
        //Gets the players names
        name1 = JOptionPane.showInputDialog(null, "What is the name of player 1?");
        name2 = JOptionPane.showInputDialog(null, "What is the name of player 2?");
-          
+
        //Makes the armies and players
        player1Army = new Army(name1);
        player2Army = new Army(name2);
        player1 = new Player(player1Army);
        player2 = new Player(player2Army);
-          
+
        //Splits the countries evenly between the two players
        deck.startOfGame(player1, player2);
-          
+
        //Sets the current and not-current players
        currentPlayer = player1;
        nonCurrentPlayer = player2;
@@ -106,7 +106,7 @@ public class MainPanel extends JApplet implements ActionListener
    {
       //Not sure what this does
       String command = evt.getActionCommand();
-      
+
       //The part that actually runs the game
       //Checks to see if there is a winner yet
       if (currentPlayer.isWinner() == false && nonCurrentPlayer.isWinner() == false)
@@ -118,18 +118,20 @@ public class MainPanel extends JApplet implements ActionListener
               currentPlayer = nonCurrentPlayer;
               nonCurrentPlayer = tempPlayer;
           }
-          
+
           if (click == 2)
           {
               //Gets a string for each player of their countries and troops
               JFrame frame1 = new JFrame();
               JFrame frame2 = new JFrame();
+              frame1.setPreferredSize(new Dimension(400, 450));
+              frame2.setPreferredSize(new Dimension(400, 450));
               String player1Info = player1.getArmy().getOwner() + "\n" + player1Army.getDisplay();
               String player2Info = player2.getArmy().getOwner() + "\n" + player2Army.getDisplay();
               JTextArea player1Stuff = new JTextArea(3, 21);
               JTextArea player2Stuff = new JTextArea(3, 21);
-              JScrollPane scrollPane1 = new JScrollPane(player1Stuff); 
-              JScrollPane scrollPane2 = new JScrollPane(player2Stuff); 
+              JScrollPane scrollPane1 = new JScrollPane(player1Stuff);
+              JScrollPane scrollPane2 = new JScrollPane(player2Stuff);
               player1Stuff.setEditable(false);
               player2Stuff.setEditable(false);
               player1Stuff.append(player1Info);
@@ -140,31 +142,31 @@ public class MainPanel extends JApplet implements ActionListener
               frame2.pack();
               frame1.setVisible(true);
               frame2.setVisible(true);
-              
+
               //Says who's turn it is
               String name = currentPlayer.getArmy().getOwner();
               String useless = JOptionPane.showInputDialog(null, "It is " + name + "'s turn (Type a letter and enter)");
-              
+
               //Displays their cards
               JFrame frame3 = new JFrame();
               String playerHand = currentPlayer.getArmy().getOwner() + "'s Hand\n" + currentPlayer.getHand().forDisplay();
               JTextArea playerHand1 = new JTextArea(3, 20);
-              JScrollPane scrollPane3 = new JScrollPane(playerHand1); 
+              JScrollPane scrollPane3 = new JScrollPane(playerHand1);
               playerHand1.setEditable(false);
               playerHand1.append(playerHand);
               frame3.add(scrollPane3);
               frame3.pack();
               frame3.setVisible(true);
           }
-          
+
           if (click == 3)
           {
               int troopsToReceive;
               String tradeInCards;
-              
+
               //Finds out if the player has any cards
               int cards = currentPlayer.getHand().getCards().size();
-              
+
               //Finds out if the player wants to exchange cards for troops if they have cards
               if (cards > 0)
                   tradeInCards = JOptionPane.showInputDialog(null, "Would you like to trade in your cards for troops? (Y/N)");
@@ -177,13 +179,13 @@ public class MainPanel extends JApplet implements ActionListener
                   String countryCardsToTradeIn = JOptionPane.showInputDialog(null, "What country cards would you like to turn in? (No spaces in countries names)(NewGuinea)");
                   String[] countryCards = countryCardsToTradeIn.split(" ");
                   ArrayList<Card> cardsToTradeIn = new ArrayList<Card>();
-                  
+
                   //Goes through the players cards
                   for (int i = 0; i < currentPlayer.getHand().getCards().size(); i++)
                   {
                       Card card = currentPlayer.getHand().getCards().get(i);
                       String cardCountryName = card.getCountry().getNameWithoutSpaces();
-                      
+
                       //Goes through the countries the user gave
                       for (int j = 0; j < countryCards.length; j++)
                       {
@@ -194,7 +196,7 @@ public class MainPanel extends JApplet implements ActionListener
                           }
                       }
                   }
-                  
+
                   //Finds out how many troops the player gets
                   troopsToReceive = currentPlayer.numTroopsToReceive(continents, cardsToTradeIn);
               }
@@ -203,61 +205,66 @@ public class MainPanel extends JApplet implements ActionListener
                   //Finds out how many troops the player gets
                   troopsToReceive = currentPlayer.numTroopsToReceive(continents);
               }
-              
+
               String whereAndHowManyToPlaceTroops = JOptionPane.showInputDialog(null, "Where would like to place your " + troopsToReceive + " troops and how many at each spot? (Country # Country #)(No spaces in country names)");
-              
+
               int numberToAdd;
               Country countryToAdd;
               ArrayList<String> words = new ArrayList<String>();
               String[] whereAndHowManyToPlaceTroops1 = whereAndHowManyToPlaceTroops.split(" ");
-              
+
               for (int i = 0; i < whereAndHowManyToPlaceTroops1.length; i++)
               {
                   words.add(whereAndHowManyToPlaceTroops1[i]);
               }
-              
+
               for (int i = 0; i < words.size(); i+=2)
               {
                   countryToAdd = cc.getCountry(words.get(i));
                   numberToAdd = Integer.parseInt(words.get(i + 1));
-                  
+
                   for (int x = 0; x < numberToAdd; x++)
                   {
                       Troop troop = new Troop(countryToAdd);
                       player1.getArmy().addTroopToArmy(troop);
                   }
               }
-              
-              
+
+
           }
-          
+
           if (click == 4)
           {
               //Find out if the user wants to attack
               String attack = JOptionPane.showInputDialog(null, "Do you want to attack? (Y/N)");
               boolean goingToAttack;
               String result = "";
-              
+
               //Changes attack to a boolean
               if (attack.equals("Y"))
                   goingToAttack = true;
               else
                   goingToAttack = false;
-                
+
               //Checks to make sure the user still wants to attack
               while (goingToAttack)
               {
                   //Finds out what country they want to attack with and against
                   String attacking = JOptionPane.showInputDialog(null, "What country do you want to attack from? (No spaces)");
-                  String defending = JOptionPane.showInputDialog(null, "What country do you want to attack? (No spaces)");  
-                  
+                  String defending = JOptionPane.showInputDialog(null, "What country do you want to attack? (No spaces)");
+
                   Country attackingCountry = cc.getCountry(attacking);
                   Country defendingCountry = cc.getCountry(defending);
-                  
+
+                  System.out.println(attacking);
+
+                  String name = attackingCountry.getOccupant().getArmy().getOwner();
+                  System.out.println("Hey");
+
                   //int size = attackingCountry.getTroops();
-                  //if (2 > 1)
-                    message.setText("Hey");
-                    message.setText(attackingCountry.getOccupant().getArmy().getOwner());
+                  if (true)
+
+                    message.setText(attacking);
                   ///message.setText(size);
                   Country[] attackingCountryNeighbours = attackingCountry.getAdjacentCountries();
                   ArrayList<Troop> attackers = new ArrayList<> ();
@@ -269,15 +276,15 @@ public class MainPanel extends JApplet implements ActionListener
                   int attackerDice;
                   int[] attackingNumbers = new int[2];
                   int[] defendingNumbers = new int[2];
-                  boolean[] results = new boolean[2];
-        
+                  boolean[] results = new boolean[3];
+
                   //Simulates the battle
                   for (int i = 0; i < attackingCountryNeighbours.length; i++)
                   {
                       if (attackingCountryNeighbours[i].getNameWithoutSpaces() == defendingCountry.getNameWithoutSpaces())
                           isNeighbour = true;
                   }
-        
+
                   for (int i = 0; i < attackingArmy.troops.size(); i++)
                   {
                       Troop currentTroop = attackingArmy.troops.get(i);
@@ -285,7 +292,7 @@ public class MainPanel extends JApplet implements ActionListener
                           attackers.add(currentTroop);
                   }
                   attackers.remove(0);
-        
+
                   if (isNeighbour == true && attackers.size() != 0)
                   {
                       for (int i = 0; i < defendingArmy.troops.size(); i++)
@@ -294,23 +301,23 @@ public class MainPanel extends JApplet implements ActionListener
                           if (currentTroop.getWhereLocated().getName().equals(defendingCountry.getName()))
                               defenders.add(currentTroop);
                       }
-            
+
                       if (defenders.size() >= 2)
                           defenderDice = 2;
                       else
                           defenderDice = 1;
-                
+
                       if (attackers.size() >= 4)
                           attackerDice = 3;
                       else
                           attackerDice = attackers.size();
-                
+
                       Dice dice = new Dice();
                       ArrayList<Integer> defenderNumbers = dice.roll(defenderDice);
                       ArrayList<Integer> attackerNumbers = dice.roll(attackerDice);
-            
-            
-            
+
+
+
                       if (defenderDice > attackerDice)
                           defenderNumbers.remove(0);
                       else if (attackerDice - defenderDice == 2)
@@ -320,9 +327,9 @@ public class MainPanel extends JApplet implements ActionListener
                       }
                       else if (attackerDice - defenderDice == 1)
                           attackerNumbers.remove(0);
-                
-            
-            
+
+
+
                       if (attackerNumbers.get(0) > defenderNumbers.get(0))
                       {
                           boolean found = false;
@@ -338,7 +345,7 @@ public class MainPanel extends JApplet implements ActionListener
                               }
                           }
                       }
-            
+
                       if (attackerNumbers.get(0) <= defenderNumbers.get(0))
                       {
                           boolean found = false;
@@ -354,7 +361,7 @@ public class MainPanel extends JApplet implements ActionListener
                               }
                           }
                       }
-            
+
                       if (attackerNumbers.size() == 2)
                       {
                           if (attackerNumbers.get(1) > defenderNumbers.get(1))
@@ -372,7 +379,7 @@ public class MainPanel extends JApplet implements ActionListener
                                   }
                               }
                           }
-                
+
                           if (attackerNumbers.get(1) <= defenderNumbers.get(1))
                           {
                               boolean found = false;
@@ -390,7 +397,7 @@ public class MainPanel extends JApplet implements ActionListener
                           }
                       }
                   }
-        
+
                   if (defenders.size() == 0)
                   {
                       defendingCountry.setOccupant(currentPlayer);
@@ -404,7 +411,7 @@ public class MainPanel extends JApplet implements ActionListener
                   }
                   else
                       results[2] = false;
-                                  
+
                   //Gives the results of the battles
                   if (results[0] == true && results[1] == true)
                       result = "Two opponent troops were killed";
@@ -416,12 +423,12 @@ public class MainPanel extends JApplet implements ActionListener
                       result = "One opponent troop was killed";
                   else if (results[0] == false)
                       result = "One of your troops was killed";
-                      
+
                   if (results[2] == true)
                       result += " and you captured " + defendingCountry;
-                      
+
                   message.setText(result);
-                  
+
                   //Gets a string for each player of their countries and troops
                   JFrame frame1 = new JFrame();
                   JFrame frame2 = new JFrame();
@@ -429,8 +436,8 @@ public class MainPanel extends JApplet implements ActionListener
                   String player2Info = player2.getArmy().getOwner() + "\n" + player2Army.getDisplay();
                   JTextArea player1Stuff = new JTextArea(3, 21);
                   JTextArea player2Stuff = new JTextArea(3, 21);
-                  JScrollPane scrollPane1 = new JScrollPane(player1Stuff); 
-                  JScrollPane scrollPane2 = new JScrollPane(player2Stuff); 
+                  JScrollPane scrollPane1 = new JScrollPane(player1Stuff);
+                  JScrollPane scrollPane2 = new JScrollPane(player2Stuff);
                   player1Stuff.setEditable(false);
                   player2Stuff.setEditable(false);
                   player1Stuff.append(player1Info);
@@ -441,7 +448,7 @@ public class MainPanel extends JApplet implements ActionListener
                   frame2.pack();
                   frame1.setVisible(true);
                   frame2.setVisible(true);
-                    
+
                   //Finds out if the user wants to attack again
                   attack = JOptionPane.showInputDialog(null, "Do you want to attack again? (Y/N)");
                   if (attack.equals("Y"))
@@ -449,7 +456,7 @@ public class MainPanel extends JApplet implements ActionListener
                   else
                       goingToAttack = false;
               }
-              
+
               //Checks to see if the user gets a card for capturing a country
               if (currentPlayer.getsBonusCard())
               {
@@ -458,18 +465,18 @@ public class MainPanel extends JApplet implements ActionListener
                   currentPlayer.addCard(card);
               }
           }
-          
+
           if (click == 5)
           {
               //Sees if the user wants to move troops
               String wantToMoveTroops = JOptionPane.showInputDialog(null, "Do you want to move troops? (Y/N)");
               boolean moveTroops;
-              
+
               if (wantToMoveTroops.equals("Y"))
                   moveTroops = true;
               else
                   moveTroops = false;
-              
+
               //Moves troops if user said yes
               if (moveTroops)
               {
@@ -478,31 +485,31 @@ public class MainPanel extends JApplet implements ActionListener
                   String whereTo = JOptionPane.showInputDialog(null, "Where are you taking the troops to? (No spaces)");
                   String howManyToMove = JOptionPane.showInputDialog(null, "How many of the " + cc.getCountry(whereTo).getTroops() + " troops are you moving?");
                   int howMany = Integer.parseInt(howManyToMove);
-                    
+
                   //Moves the troops
                   currentPlayer.getArmy().moveTroops(cc.getCountry(whereFrom), cc.getCountry(whereTo), howMany);
               }
           }
-          
+
           if (click == 6)
           {
               //Updates the winners
               currentPlayer.updateWinner(nonCurrentPlayer);
               nonCurrentPlayer.updateWinner(currentPlayer);
-                
+
               //Resets getting a card for capturing a country
               currentPlayer.resetBonusCard();
           }
       }
-      else   
+      else
       {
           //Prints who the winner is
           if (currentPlayer.isWinner())
               System.out.println("The winner is " + currentPlayer.getArmy().getOwner());
-              else 
+              else
               System.out.println("The winner is " + nonCurrentPlayer.getArmy().getOwner());
       }
-      
+
       if (click < 6)
           click += 1;
       else
