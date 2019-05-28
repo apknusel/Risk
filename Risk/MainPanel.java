@@ -59,7 +59,7 @@ public class MainPanel extends JApplet implements ActionListener
 
        try 
        {
-           image1 = ImageIO.read(new File("map 10.jpg"));
+           image1 = ImageIO.read(new File("map13.jpg"));
        }
        catch(Exception e){}
 
