@@ -1,15 +1,16 @@
 
 public class Country
 {
-    String name;
+    String name, nameWithoutSpaces;
     Player occupant;
     String continent;
     int troops;
     Country[] adjacentCountries;
     
-    public Country(String nameOfCountry, String continentIn, int troopsThere)
+    public Country(String nameOfCountry, String nameWOSpace, String continentIn, int troopsThere)
     {
         name = nameOfCountry;
+        nameWithoutSpaces = nameWOSpace;
         continent = continentIn;
         troops = troopsThere;
     }
@@ -49,12 +50,17 @@ public class Country
         return name;
     }
     
+    public String getNameWithoutSpaces()
+    {
+        return nameWithoutSpaces;
+    }
+    
     public Country[] getAdjacentCountries()
     {
         return adjacentCountries;
     }
     
-    public String getContinent(String continent)
+    public String getContinent()
     {
         return continent;
     }
