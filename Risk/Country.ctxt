@@ -1,6 +1,6 @@
 #BlueJ class context
-comment0.params=nameOfCountry\ nameWOSpace\ continentIn\ troopsThere
-comment0.target=Country(java.lang.String,\ java.lang.String,\ java.lang.String,\ int)
+comment0.params=nameOfCountry\ nameWOSpace\ continentIn
+comment0.target=Country(java.lang.String,\ java.lang.String,\ java.lang.String)
 comment1.params=adjacentCountries1
 comment1.target=void\ setAdjacentCountries(Country[])
 comment10.params=

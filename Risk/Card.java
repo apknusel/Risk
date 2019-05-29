@@ -10,16 +10,19 @@ public final class Card
     
 	public String getName()
 	{
+	    //Returns the country's name
 		return country.getName();
 	}
 	
     public int getStars()
     {
+        //Returns how many stars you get for turning in the country card
 		return stars;
     }
     
     public Country getCountry()
     {
+        //Returns the country object
 		return country;
     }
 }

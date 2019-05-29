@@ -11,6 +11,7 @@ public class Hand
     
     public void add(Card card)
     {
+        //Adds a card to a players hand
         hand.add(card);
     }
     
@@ -18,6 +19,7 @@ public class Hand
     {
         String string = "";
         
+        //Formats the cards info and then returns it
         for (int i = 0; i < hand.size(); i++)
         {
             Card card = hand.get(i);
@@ -32,11 +34,14 @@ public class Hand
     {
         int totalStars = 0;
         int troopsToGive = 0;
+        
+        //Counts the total stars of the cards being turned in
         for (int i = 0; i < cards.size(); i++)
         {
             totalStars += cards.get(i).getStars();
         }
         
+        //Figures how many troops are being given out based on the stars being turned in
         if (totalStars  == 1)
             troopsToGive = 1;
         else if (totalStars == 2)
@@ -65,6 +70,7 @@ public class Hand
 
     public ArrayList<Card> getCards()
     {
+        //Returns the players hand
         return hand;
     }
 }
