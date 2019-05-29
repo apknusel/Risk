@@ -260,6 +260,8 @@ public class MainPanel extends JApplet implements ActionListener
                   Country attackingCountry = cc.getCountry(attacking);
                   Country defendingCountry = cc.getCountry(defending);
                   
+                  String roll = JOptionPane.showInputDialog(null, "Press enter to roll");
+                  
                   Country[] attackingCountryNeighbours = attackingCountry.getAdjacentCountries();
                   ArrayList<Troop> attackers = new ArrayList<> ();
                   ArrayList<Troop> defenders = new ArrayList<> ();
