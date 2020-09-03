@@ -11,6 +11,7 @@ public class Dice
     
     public ArrayList<Integer> roll(int numberOfDice) 
     {
+        //Rolls the number of dice inserted and puts the results into an arrayList
 		diceArray = new ArrayList<Integer>(numberOfDice);
 		for(int i = 0; i < numberOfDice; i++) 
 		{

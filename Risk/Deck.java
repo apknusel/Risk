@@ -21,11 +21,13 @@ public class Deck
         Collections.shuffle(countries);
         deck = new ArrayList<Card>();
         discardPile = new ArrayList<Card>();
+        
+        //Makes a card for all of the countries and then puts it into an arrayList
         for (i = 0; i < countries.size(); i++)
         {
             int cardType;
-            String name = countries.get(i).getName();
-            if (name == "Ontario" || name == "Afghanistan" || name == "Siberia" || name == "Southern Europe" || name == "Western Europe" || name == "Yakutsk" || name == "Congo" || name == "Ural" || name == "Northern Europe" || name == "Russia" || name == "Irkutsk" || name == "Mongolia") 
+            String name = countries.get(i).getNameWithoutSpaces();
+            if (name.equals("Ontario") || name.equals("Afghanistan") || name.equals("Siberia") || name.equals("SouthernEurope") || name.equals("WesternEurope") || name.equals("Yakutsk") || name.equals("Central Africa") || name.equals("Ural") || name.equals("NorthernEurope") || name.equals("Russia") || name.equals("Irkutsk") || name.equals("Mongolia")) 
             {
                 Card card = new Card(2, countries.get(i));
                 deck.add(card);
@@ -43,6 +45,8 @@ public class Deck
     {
         Army player1Army = player1.getArmy();
         Army player2Army = player2.getArmy();
+        
+        //Divides up the countries evenly and gives each player the troops for the countries and sets the occupant for each country
         for (int i = 0; i < 21; i++)
         {
             Card card1 = this.draw();
@@ -83,10 +87,13 @@ public class Deck
     
     public Card draw()
     {
+        //Makes sure the deck isn't empty and if it is it puts the discard pile back 
         if (deck.size() == 0)
             this.discardToDeck();
-            
+         
         Card drawCard = this.deck.get(0);
+        
+        //Puts the cards into the discard pile and then removes them from the deck
         discardPile.add(drawCard);
         deck.remove(0);
         return drawCard;
@@ -94,6 +101,7 @@ public class Deck
     
     public void discardToDeck()
     {
+        //Puts the discard pile into the deck
         for (int j = 0; j < discardPile.size(); i++)
         {
             deck.add(discardPile.get(0));
@@ -104,16 +112,19 @@ public class Deck
     
     public void add(Card card)
     {
+        //Adds a card to the deck
         deck.add(card);
     }
     
     public void shuffle()
     {
+        //Shuffles the deck
         Collections.shuffle(deck);
     }
     
     public ArrayList<Card> getDeck()
     {
+        //Returns the deck
         return deck;
     }
 }
